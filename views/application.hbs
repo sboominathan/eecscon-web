@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="images/ootb-title-logo.jpeg" />
+  <title> THINK: Out of the Box Application</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="stylesheets/application.css" rel='stylesheet' type='text/css' />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css' />
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,900' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a id="about" href = "/#about2">ABOUT</a></li>
+          <li><a id="blue" href = "/application">APPLY</a></li>
+          <li><a id="goto-faq" href ="/#faq" >FAQ</a></li>
+          <li><a id="dates" href = "/#terms">TIMELINE</a></li>
+          <li><a id="dates" href = "/#partners">PARTNERS</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="about2">
+      <div class="title">
+        THINK: Out of the Box Application
+      </div>
+
+      <div class="form-style-5">
+        <form action = "/submit" method = "POST">
+
+        <fieldset>
+          <legend><span class="number">1</span> Basic Information</legend>
+          <input type="text" name="field1" placeholder="Full Name *"  required/>
+          <input type="email" name="field2" placeholder="Email *" required />
+          <input type="text" name="field11" placeholder=" Phone Number" />
+          <input type="text" name="field5" placeholder=" Age *" required />
+          <input type="text" name="field6" placeholder="Address*" required />
+          <input type="text" name="field7" placeholder="City*"  required/>
+          <input type="text" name="field8" placeholder="State*"  required/>
+          <input type="text" name="field9" placeholder="Zip Code*"  required/>
+          <input type="text" name="field10" placeholder="School Name*"  required/>
+        </fieldset>
+
+        <fieldset>
+           <legend><span class="number">2</span> Project Proposal </legend>
+
+           <a href="https://www.dropbox.com/request/5t2EUd2gDYr2zOLlDQyc" target = "_blank">
+             <input type="button" value="Upload Submission" />
+           </a>
+           <input type="checkbox" name="group" value="group"><span class = "groupText"> I am working on this project with a group. </span>
+           <label for="group">Note: If you are working with a group of students on this proposal, each student in the group should fill out and submit this entire application individually. </label>
+
+          <label for="club">Is this project related to a club/group at your school? For instance, a possibility would be working on a side robotics project as part of your school's robotics team. If so, can you please give us the contact info of the faculty advisor for this club?</label>
+           <textarea name="field12" placeholder=""></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="number">3</span> Additional Info</legend>
+
+          <label for="excitement">What excites you most about this project and Out of the Box? (Required)</label>
+          <textarea name="field13" placeholder="" required></textarea>
+
+          <label for="interest">Tell us a little bit more about your interest in science, and what scientific topics excite you the most. (Required)</label>
+          <textarea name="field14" placeholder="" required></textarea>
+
+          <label for="job">How did you hear about us? (Required)</label>
+          <select id="job" name="field15" value = "" required>
+            <option value="teacher">Teacher</option>
+            <option value="visit">School Visit</option>
+            <option value="website">Our Website</option>
+            <option value="social media">Social Media</option>
+            <option value="friend">A Friend</option>
+            <option value="scholarship">Online Scholarship Listing</option>
+            <option value="other">Other</option>
+          </select>
+        </fieldset>
+        <input type="submit" value="Apply" />
+        </form>
+      </div>
+  </section>
+
+</body>
+
+
+</html>
