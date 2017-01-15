@@ -21,11 +21,11 @@
 }
 
 #logo{
-  height:115px;
-  width: 125px;
-  margin-top: 0px;
+  height:100px;
+  width: 110px;
+  margin-top: -40px;
   margin-bottom: -75px;
-  margin-left:-590px;
+  margin-left:-470px;
 }
 
 a {
@@ -62,7 +62,7 @@ body {
 nav.navbar.navbar-inverse {
   background-color: #1d1d1d;
   border: none;
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: bold; }
   nav.navbar.navbar-inverse .navbar-nav {
     float: none;
@@ -71,7 +71,7 @@ nav.navbar.navbar-inverse {
     nav.navbar.navbar-inverse .navbar-nav a#blue {
       color: #99ddff; }
     nav.navbar.navbar-inverse .navbar-nav a#blue:hover {
-      color: yellow; }
+      color: #e2616e; }
     nav.navbar.navbar-inverse .navbar-nav li > a {
       padding: 25px;
       color: white;
@@ -128,10 +128,10 @@ nav{
 
 #about2{
   text-align: center;
-  padding-top: 150px;
+  padding-top: 100px;
   margin-top: 0px;
   margin-bottom: 0px;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
   background-color: #fff;
   font-family: "Open Sans", sans-serif;
 }
@@ -154,7 +154,7 @@ nav{
   padding: 15px;
   color: yellow }
 #about2 .about-answer {
-  font-size: 1.2em;
+  font-size: 1.0em;
   padding: 20px;
   color: #808080; }
 
@@ -409,7 +409,7 @@ hr{
  .main-title{
  color: #f2f6f9; 
  font-family: 'Montserrat', sans-serif; 
- font-size: 130px; 
+ font-size: 100px; 
  font-weight: bold; 
  letter-spacing: -1px; 
  line-height: 1; 
@@ -425,11 +425,11 @@ hr{
   background-color: #3361FF;
   text-shadow: -1px 1px #417cb8;
   border: 1px white !important;
-  width: 350px;
-  height: 65px;
+  width: 250px;
+  height: 45px;
   font-family: 'Montserrat', sans-serif; 
-  font-size: 20px;
-  opacity: .9;
+  font-size: 18px;
+  margin-bottom: 15px;
 }
 
 section.flat button a{
@@ -439,14 +439,14 @@ section.flat button a{
 
 section.flat button.flat1{
   margin-left: 50px;
-  margin-top: 120px;
+  margin-top: 80px;
   display: inline-block;
   opacity: .9;
 }
 
 section.flat button.flat2{
   margin-left: 100px;
-  margin-top: 120px;
+  margin-top: 80px;
   display: inline-block;
   opacity: .9;
 }
@@ -517,7 +517,7 @@ canvas{
   font-size: 1.1em;
   padding: 13px;
   color: #404040;
-  margin-bottom: -4px;
+  margin-bottom: -10px;
    }
 
 #team a {
@@ -618,7 +618,7 @@ canvas{
   height: 80px;
   margin-right: 25px;
   margin-left: -50px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 #price{

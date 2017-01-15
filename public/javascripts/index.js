@@ -1,10 +1,10 @@
 $(document).ready(function(){
     // new WOW().init();
-   $("#top").particleground({
-    dotColor: '#42bff4',
-    lineColor: '#3361FF',
-    density: 9000,
-   });
+   // $("#top").particleground({
+   //  dotColor: '#42bff4',
+   //  lineColor: '#3361FF',
+   //  density: 9000,
+   // });
    $(window).scroll(function(){
         if($(this).scrollTop() > 700 && $(this).scrollTop() < 1400) {
             $("nav").css({"background-color":"#3361FF"});
@@ -22,9 +22,17 @@ $(document).ready(function(){
             $("nav").css({"background-color":"#96ceed"});
             $("#navbar-collapse").css({"background-color":"#96ceed"});        
         } else{
-        	$("nav").css({"background-color":"#1d1d1d"});   
+            $("nav").css({"background-color":"#1d1d1d"});   
             $("#navbar-collapse").css({"background-color":"#1d1d1d"});   
         }
     })
+
+  $("#login-button").click(function(){
+    window.location.href = "/login";
+  })
+
+   $("#signup-button").click(function(){
+    window.location.href = "/signup";
+  })
     
 })

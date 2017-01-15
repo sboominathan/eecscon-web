@@ -2,75 +2,83 @@ var express = require('express');
 var router = express.Router();
 var bodyParser = require('body-parser');
 var mysql = require('mysql');
+var passport = require('passport-local');
+var password_hash = require('password-hash');
 
 var connection = mysql.createConnection({
-  host     : 'sql.mit.edu',
-  user     : 'think',
-  password : 'awesomeTHINK02139',
-  database : 'think+think2017'
+  host     : 'localhost',
+  user     : 'root',
+  password : 'password',
+  database : 'eecscon'
 });
-
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+router.post('/signup', function(req, res, next) {
+  var name = req.body.studentname;
+  var email = req.body.email;
+  var username = req.body.username;
+  var password = password_hash.generate(req.body.password);
+
+  var post = {
+  	name: name,
+  	email: email,
+  	username: username,
+  	password: password
+  }
+
+  connection.query("SELECT username from users where username='"+username+"'", function(err,rows){
+  	if (rows.length == 0){
+  		connection.query('INSERT INTO users SET ?', post, function (err, result) {
+	  		if (err){
+				console.log(err);
+			} else{
+				console.log("New user received.");
+			}	
+  		});
+  		res.render('index', { title: 'Express' });
+  	}
+  	else{
+  		res.render('signup', { title: 'Express' });
+  	}
+  	});
+  
+});
+
+router.get('/signup', function(req, res, next) {
+  res.render('signup', { message: 'Sign Up' });
+});
+
+router.get('/login', function(req, res, next) {
+  res.render('signup', { message: 'Login' });
+});
+
+router.post('/login', function(req, res, next) {
+  var username = req.body.username;
+  var password = req.body.password;
+
+  connection.query("SELECT * from users where username='"+username+"'", function(err,rows){
+  	if (rows.length == 1){
+  		console.log(rows[0]);
+  		var user = rows[0];
+  		if (password_hash.verify(password, user['password'])){
+  			req.session.user = user['username'];
+  			res.render('index',{ title: 'Express' });
+  		} else{
+  			res.render('signup',{ title: 'Express' });
+  		}
+  	}
+  	else{
+  		res.render('signup', { title: 'Express' });
+  	}
+  	});
+});
+
 router.get('/application', function(req, res, next) {
   res.render('application', { title: 'Express' });
 });
 
-router.post('/submit', function(req, res, next) {
-
-	  var name = req.body.field1;
-	  var age = req.body.field5;
-	  var email = req.body.field2;
-	  var phone = req.body.field11;
-	  var address = req.body.field6;
-	  var city = req.body.field7;
-	  var state = req.body.field8;
-	  var zipCode = req.body.field9;
-	  var school = req.body.field10;
-
-	  var club = req.body.field12;
-	  var excitement = req.body.field13;
-	  var interest = req.body.field14;
-	  var location = req.body.field15;
-	  var group = req.body.group;
-
-	  var post  = {
-		  name: name,
-		  age: age,
-		  email: email,
-		  phone: phone,
-		  address: address,
-		  city: city,
-		  state: state,
-		  zip: zipCode,
-		  school: school,
-		  club: club,
-		  excitement: excitement,
-		  interest: interest,
-		  location: location,
-		  group: group
-	   };
-
-	 // connection.connect();
-
-	connection.query('INSERT INTO out_of_the_box SET ?', post, function (err, result) {
-		if (err){
-			console.log(err);
-		} else{
-			console.log("New application received.");
-		}	
-		// connection.end();
-
-	});
-
-  res.render('submission', { title: 'Express' });
-});
-
-// router.get('/submit', function(req, res, next) {
-// 	res.render('submission', { title: 'Express' });
-// });
 module.exports = router;

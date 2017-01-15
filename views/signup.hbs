@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="images/eecscon-logo.png" />
+  <title> EECScon 2017 Login</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="stylesheets/signup.css" rel='stylesheet' type='text/css' />
+  <link href="stylesheets/animate.css" rel='stylesheet' type='text/css' />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css' />
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,900' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet" type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src = "/javascripts/login.js"></script>
+  <script src = "/javascripts/particleground.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+  
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a id="about" href = "/#about2">ABOUT</a></li>
+          <li><a id="blue" href = "/signup">APPLY</a></li>
+          <li><a id="goto-faq" href ="/#faq-actual" >FAQ</a></li>
+          <li><a id="dates" href = "/#team">TEAM</a></li>
+          <li><a id="dates" href = "/#sponsors">CONTACT US</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<div id = "status"> {{message}} </div>
+<div id = "signup-form" class="form-style-5">
+  <form action = "/signup" method = "post">
+    <fieldset>
+      <legend> SIGN UP</legend>
+      <input type="text" name="studentname" placeholder="Your Name *" required>
+      <input type="email" name="email" placeholder="Your Email *" required>
+      <input type="text" name="username" placeholder="Username *" required>
+      <input type="password" name="password" placeholder="Password *" required>     
+      <input type="submit" value="Sign Up" />
+      <a id = "account" role = "button"> Already have an account? </a>
+  </form>
+</div>
+
+<div id = "login-form" class="form-style-5">
+  <form action = "/login" method = "post">
+    <fieldset>
+      <legend> LOGIN </legend>
+      <input type="text" name="username" placeholder="Username *" required>
+      <input type="password" name="password" placeholder="Password *" required>     
+      <input type="submit" value="Login" />
+      <a id = "register" role = "button"> Don't have an account? </a>
+  </form>
+</div>
+
+
+  
+
+</body>
+      
+</html>
