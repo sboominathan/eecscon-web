@@ -4,6 +4,9 @@ var bodyParser = require('body-parser');
 var mysql = require('mysql');
 var passport = require('passport-local');
 var password_hash = require('password-hash');
+var nodemailer = require('nodemailer');
+var randToken = require('rand-token');
+var hbs = require('nodemailer-express-handlebars');
 
 var connection = mysql.createConnection({
   host     : 'localhost',
@@ -11,6 +14,23 @@ var connection = mysql.createConnection({
   password : 'password',
   database : 'eecscon'
 });
+
+var smtpTransport = nodemailer.createTransport({
+   service: "Gmail",  // sets automatically host, port and connection security settings
+   auth: {
+       user: "username",
+       pass: "password"
+   }
+});
+
+var options = {
+     viewEngine: {
+         extname: '.hbs',
+         layoutsDir: 'views/',
+     },
+     viewPath: 'views/',
+     extName: '.hbs'
+ };
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -22,12 +42,15 @@ router.post('/signup', function(req, res, next) {
   var email = req.body.email;
   var username = req.body.username;
   var password = password_hash.generate(req.body.password);
+  var confirmationToken = randToken.generate(16);
+
 
   var post = {
     name: name,
     email: email,
     username: username,
-    password: password
+    password: password,
+    confirmationToken: confirmationToken
   }
 
   connection.query("SELECT username from users where username='"+username+"'", function(err,rows){
@@ -36,13 +59,31 @@ router.post('/signup', function(req, res, next) {
         if (err){
         console.log(err);
       } else{
+        req.session.user = username;
         console.log("New user received.");
+        smtpTransport.use('compile', hbs(options));
+        var mail = {
+            from: 'sooraj.boomi@gmail.com', // sender address
+            to: email, // list of receivers
+            subject: 'Thanks for Signing up for EECScon!', // Subject line
+            template: 'signup-email', // html body
+            context: {
+              confirmationLink: "localhost:3000/"+confirmationToken
+            }
+        };
+        smtpTransport.sendMail(mail, function(error, info){
+        if(error){
+            return console.log(error);
+        }
+        console.log('Message has been sent: ' + info.response);
+
+        })
       } 
       });
-      res.render('application', { title: 'Express' });
+      res.redirect('/application');
     }
     else{
-      res.render('signup', { title: 'Express' });
+      res.render('signup', {message: 'Sign Up', error: 'That username is taken.' });
     }
     });
   
@@ -66,7 +107,7 @@ router.post('/login', function(req, res, next) {
       var user = rows[0];
       if (password_hash.verify(password, user['password'])){
         req.session.user = user['username'];
-        res.render('application',{ title: 'Express' });
+        res.redirect('/application');
       } else{
         res.render('signup',{ title: 'Express' });
       }

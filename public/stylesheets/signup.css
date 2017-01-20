@@ -140,3 +140,8 @@ nav.navbar.navbar-inverse {
   text-decoration: none;
   color: #e2616e;
 }
+
+#errors{
+  color: #e2616e;
+  margin-bottom: 15px;
+}
