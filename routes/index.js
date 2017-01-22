@@ -50,7 +50,8 @@ router.post('/signup', function(req, res, next) {
     email: email,
     username: username,
     password: password,
-    confirmationToken: confirmationToken
+    confirmationToken: confirmationToken,
+    verified: "False"
   }
 
   connection.query("SELECT username from users where username='"+username+"'", function(err,rows){
@@ -60,6 +61,7 @@ router.post('/signup', function(req, res, next) {
         console.log(err);
       } else{
         req.session.user = username;
+        req.session.verified = false;
         console.log("New user received.");
         smtpTransport.use('compile', hbs(options));
         var mail = {
@@ -68,7 +70,8 @@ router.post('/signup', function(req, res, next) {
             subject: 'Thanks for Signing up for EECScon!', // Subject line
             template: 'signup-email', // html body
             context: {
-              confirmationLink: "localhost:3000/"+confirmationToken
+              confirmationLink: "localhost:3000/verify/"+username+"/"+confirmationToken,
+              username: username 
             }
         };
         smtpTransport.sendMail(mail, function(error, info){
@@ -80,7 +83,7 @@ router.post('/signup', function(req, res, next) {
         })
       } 
       });
-      res.redirect('/application');
+      res.render('signup', {message: 'Sign Up', error: 'Thanks for signing up for EECScon! Please check your email for a verification link.' });
     }
     else{
       res.render('signup', {message: 'Sign Up', error: 'That username is taken.' });
@@ -90,11 +93,19 @@ router.post('/signup', function(req, res, next) {
 });
 
 router.get('/signup', function(req, res, next) {
-  res.render('signup', { message: 'Sign Up' });
+  if (req.session && req.session.user && req.session.verified){
+    res.redirect('/application');
+  } else{
+    res.render('signup', { message: 'Sign Up' });
+  }
 });
 
 router.get('/login', function(req, res, next) {
-  res.render('signup', { message: 'Login' });
+  if (req.session && req.session.user && req.session.verified){
+    res.redirect('/application');
+  } else{
+    res.render('signup', { message: 'Login' });
+  }
 });
 
 router.post('/login', function(req, res, next) {
@@ -106,10 +117,17 @@ router.post('/login', function(req, res, next) {
       console.log(rows[0]);
       var user = rows[0];
       if (password_hash.verify(password, user['password'])){
-        req.session.user = user['username'];
-        res.redirect('/application');
+
+        if (user['verified']=='True'){
+          req.session.user = user['username'];
+          req.session.verified = true;
+          res.redirect('/application');
+        } else{
+          res.render('signup', {message: 'Login', error: 'Please check your account for a verification link' });
+        }
+        
       } else{
-        res.render('signup',{ title: 'Express' });
+        res.render('signup', {message: 'Login', error: 'Invalid username or password.' });
       }
     }
     else{
@@ -118,11 +136,40 @@ router.post('/login', function(req, res, next) {
     });
 });
 
+router.get('/verify/:username/:confirmationToken', function(req, res, next){
+
+  var username = req.params.username;
+  var confirmationToken = req.params.confirmationToken;
+
+   connection.query("SELECT * from users where username='"+username+"'", function(err,rows){
+    if (rows.length == 1){
+
+      var user = rows[0];
+      if (confirmationToken == user['confirmationToken']){
+        req.session.user = user['username'];
+        req.session.verified = true;
+         connection.query("UPDATE users set verified='True' where username ='"+username+"'", function(err,rows){
+          if (err){
+            console.log(err);
+          }
+         });
+        res.redirect('/application');
+      } else{
+        res.render('signup', {message: 'Login', error: 'Invalid verification link.' });
+      }
+    }
+    else{
+      res.render('signup', {message: 'Login', error: 'That user does not exist.' });
+    }
+    });
+
+});
+
 router.get('/application', function(req, res, next) {
   if (req.session && req.session.user){
     res.render('application', { title: 'Express' });
   } else{
-    res.render('signup', { message: 'Login' });
+    res.redirect('/signup');
   }
 });
 
@@ -152,6 +199,11 @@ router.post('/apply', function(req,res,next){
 
   res.render("index",{});
 
+})
+
+router.get('/signout',function(req,res,next){
+  req.session.reset();
+  res.render("index",{});
 })
 
 module.exports = router;
