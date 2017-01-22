@@ -8,6 +8,7 @@ var nodemailer = require('nodemailer');
 var randToken = require('rand-token');
 var hbs = require('nodemailer-express-handlebars');
 
+/* Connecting to MySQL database */
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
@@ -15,6 +16,7 @@ var connection = mysql.createConnection({
   database : 'eecscon'
 });
 
+/* Setting up transporter for confirmation emails */
 var smtpTransport = nodemailer.createTransport({
    service: "Gmail",  // sets automatically host, port and connection security settings
    auth: {
@@ -51,7 +53,8 @@ router.post('/signup', function(req, res, next) {
     username: username,
     password: password,
     confirmationToken: confirmationToken,
-    verified: "False"
+    verified: "False",
+    submitted: "False"
   }
 
   connection.query("SELECT username from users where username='"+username+"'", function(err,rows){
@@ -62,6 +65,7 @@ router.post('/signup', function(req, res, next) {
       } else{
         req.session.user = username;
         req.session.verified = false;
+        req.session.submitted = false;
         console.log("New user received.");
         smtpTransport.use('compile', hbs(options));
         var mail = {
@@ -117,7 +121,9 @@ router.post('/login', function(req, res, next) {
       console.log(rows[0]);
       var user = rows[0];
       if (password_hash.verify(password, user['password'])){
-
+        if (user['submitted']=='True'){
+          req.session.submitted = true;
+        }
         if (user['verified']=='True'){
           req.session.user = user['username'];
           req.session.verified = true;
@@ -140,14 +146,14 @@ router.get('/verify/:username/:confirmationToken', function(req, res, next){
 
   var username = req.params.username;
   var confirmationToken = req.params.confirmationToken;
-
+  console.log("hello");
    connection.query("SELECT * from users where username='"+username+"'", function(err,rows){
     if (rows.length == 1){
 
       var user = rows[0];
       if (confirmationToken == user['confirmationToken']){
         req.session.user = user['username'];
-        req.session.verified = true;
+        
          connection.query("UPDATE users set verified='True' where username ='"+username+"'", function(err,rows){
           if (err){
             console.log(err);
@@ -155,6 +161,7 @@ router.get('/verify/:username/:confirmationToken', function(req, res, next){
          });
         res.redirect('/application');
       } else{
+        console.log("hello");
         res.render('signup', {message: 'Login', error: 'Invalid verification link.' });
       }
     }
@@ -167,13 +174,28 @@ router.get('/verify/:username/:confirmationToken', function(req, res, next){
 
 router.get('/application', function(req, res, next) {
   if (req.session && req.session.user){
-    res.render('application', { title: 'Express' });
+    var username = req.session.user;
+    if (req.session.submitted){
+      connection.query("SELECT * from applications where username='"+username+"'", function(err,rows){
+        var user = rows[0];
+        res.render('application', {message: "Thanks for applying to EECScon! You can come back and edit your application at any time.", errors: 'Edit Application', firstname:user['firstname'],lastname:user['lastname'],email:user['email'], year: user['year'], course: user['course'], superurop: user['superurop'], advisor: user['advisor'], presentation: user['presentation'], field: user['field'], specify: user['specify'], abstract: user['abstract']});
+      });
+
+    } else if (!(req.session.verified)){
+      res.render('application', { message: 'Thanks for verifying your account!'});
+      req.session.verified = true;
+    } else{
+      res.render('application',{message: "hello there"});
+    }
+    
   } else{
     res.redirect('/signup');
   }
 });
 
 router.post('/apply', function(req,res,next){
+
+  var username = req.session.user;
 
   var post = {
     firstname: req.body.firstname,
@@ -186,7 +208,16 @@ router.post('/apply', function(req,res,next){
     presentation: req.body.presentation,
     field: req.body.field,
     specify: req.body.specify,
-    abstract: req.body.abstract
+    abstract: req.body.abstract,
+    username: username
+  }
+
+  if (req.session.submitted){
+    connection.query("DELETE FROM applications WHERE username='"+username+"'",function (err, result) {
+      if (err){
+        console.log(err);
+      }
+    });
   }
 
   connection.query('INSERT INTO applications SET ?', post, function (err, result) {
@@ -194,11 +225,16 @@ router.post('/apply', function(req,res,next){
         console.log(err);
       } else {
         console.log("new application received");
+        req.session.submitted = true;
+        connection.query("UPDATE users set submitted='True' where username ='"+username+"'", function(err,rows){
+          if (err){
+            console.log(err);
+          }
+        });
       }
   });
-
-  res.render("index",{});
-
+  
+  res.redirect("/application");
 })
 
 router.get('/signout',function(req,res,next){

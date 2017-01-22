@@ -163,3 +163,17 @@ nav.navbar.navbar-inverse {
   height: 150px;
 }
 
+#errors{
+  color: #e2616e;
+  margin-bottom: 25px;
+}
+
+#message{
+  color: #e2616e;
+  margin-bottom: 15px;
+}
+
+#errors a:hover{
+  text-decoration: none;
+}
+

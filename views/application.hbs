@@ -15,7 +15,7 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src = "/javascripts/login.js"></script>
+  <script src = "/javascripts/application.js"></script>
   <script src = "/javascripts/particleground.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js"></script>
@@ -49,22 +49,27 @@
       </div>
     </div>
   </nav>
+
+
+
 <div id = "application" class="form-style-5">
+  <div id = "message">{{message}}</div>
+  <div id = "errors"> <a role = "button">{{errors}}</a> </div>
   <form action = "/apply" method = "post">
     <fieldset>
       <legend><span class="number">1</span> Basic Info </legend>
-      <input type="text" id = "firstname" name="firstname" placeholder="First Name *" required>
-      <input type="text" id = "lastname" name="lastname" placeholder="Last Name *" required>
-      <input type="text" id = "email" name="email" placeholder="Your Email *" required>
-       <select id="year" name="year" value = "" required>
-            <option value="" disabled selected>Year *</option>
+      <input type="text" id = "firstname" name="firstname" placeholder="First Name *" value = "{{firstname}}"required>
+      <input type="text" id = "lastname" name="lastname" value = "{{lastname}}" placeholder="Last Name *" required>
+      <input type="text" id = "email" name="email"  value = "{{email}}" placeholder="Your Email *" required>
+       <select id="year" name="year" value = "{{year}}" required>
+            <option value="" selected disabled>Year *</option>
             <option value="2017">2017</option>
             <option value="2018">2018</option>
             <option value="2019">2019</option>
             <option value="2020">2020</option>  
       </select>
-      <select id="course" name="course" value = "" required>
-            <option value="" disabled selected>Course *</option>
+      <select id="course" name="course" value = "{{course}}" required>
+            <option value="" selected disabled >Course *</option>
             <option value="6-1">6-1</option>
             <option value="6-2">6-2</option>
             <option value="6-3">6-3</option>
@@ -75,18 +80,18 @@
     <fieldset>
       <legend><span class="number">2</span> EECScon Info </legend>
       <label for="superurop">Are you doing a SuperUROP? (Required)</label>
-      <select id="superurop" name="superurop" value = "" required>
+      <select id="superurop" name="superurop" value = "{{superurop}}" required>
             <option value="Yes">Yes</option>
             <option value="No">No</option>
       </select>
       <label for="superurop">If you answered yes to the previous question, who is your faculty advisor?</label>
-      <input type="text" id = "advisor" name="advisor" placeholder="Faculty Advisor">
-      <select id="presentation" name="presentation" value = "" required>
+      <input type="text" id = "advisor" name="advisor" value="{{advisor}}" placeholder="Faculty Advisor">
+      <select id="presentation" name="presentation" value = "{{presentation}}" required>
             <option value="" disabled selected>Presentation Type *</option>
             <option value="Oral">Oral</option>
             <option value="Poster">Poster</option>
       </select>
-       <select id="Field" id = "Field" name="Field" value = "" required>
+       <select id="field" id = "field" name="field" value = "{{field}}" required>
             <option value="" disabled selected>Field *</option>
             <option value="AI">Artificial Intelligence</option>
             <option value="BioEECS">BioEECS</option>
@@ -97,12 +102,12 @@
             <option value="Other">Other</option> 
       </select>
       <label for="other">If you answered other above, please specify the field.</label>
-      <input type="text" id = "specify" name="specify" placeholder="Field Name">
+      <input type="text" id = "specify" name="specify" value = "{{specify}}" placeholder="Field Name">
     </fieldset>
     <fieldset>
       <legend><span class="number">3</span> EECScon Abstract </legend>
        <label for="abstract">Please submit your abstract below (Max. 250 words)</label>
-       <textarea id = "abstract" name="abstract" placeholder="" required></textarea>
+       <textarea id = "abstract" name="abstract" placeholder="" required>{{abstract}}</textarea>
     </fieldset>
     <input type="submit" value="Apply" />
   </form>
