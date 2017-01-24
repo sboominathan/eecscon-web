@@ -7,21 +7,22 @@ var password_hash = require('password-hash');
 var nodemailer = require('nodemailer');
 var randToken = require('rand-token');
 var hbs = require('nodemailer-express-handlebars');
+var config = require('../config')
 
 /* Connecting to MySQL database */
 var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : 'password',
-  database : 'eecscon'
+  host     : config.dbhost,
+  user     : config.dbuser,
+  password : config.dbpassword,
+  database : config.dbname
 });
 
 /* Setting up transporter for confirmation emails */
 var smtpTransport = nodemailer.createTransport({
    service: "Gmail",  // sets automatically host, port and connection security settings
    auth: {
-       user: "username",
-       pass: "password"
+       user: config.username,
+       pass: config.password
    }
 });
 
@@ -37,6 +38,7 @@ var options = {
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
+
 });
 
 router.post('/signup', function(req, res, next) {
@@ -45,7 +47,6 @@ router.post('/signup', function(req, res, next) {
   var username = req.body.username;
   var password = password_hash.generate(req.body.password);
   var confirmationToken = randToken.generate(16);
-
 
   var post = {
     name: name,
@@ -146,8 +147,7 @@ router.get('/verify/:username/:confirmationToken', function(req, res, next){
 
   var username = req.params.username;
   var confirmationToken = req.params.confirmationToken;
-  console.log("hello");
-   connection.query("SELECT * from users where username='"+username+"'", function(err,rows){
+  connection.query("SELECT * from users where username='"+username+"'", function(err,rows){
     if (rows.length == 1){
 
       var user = rows[0];
@@ -185,7 +185,7 @@ router.get('/application', function(req, res, next) {
       res.render('application', { message: 'Thanks for verifying your account!'});
       req.session.verified = true;
     } else{
-      res.render('application',{message: "hello there"});
+      res.render('application',{});
     }
     
   } else{
@@ -232,9 +232,10 @@ router.post('/apply', function(req,res,next){
           }
         });
       }
+      res.redirect("/application");
   });
   
-  res.redirect("/application");
+ 
 })
 
 router.get('/signout',function(req,res,next){

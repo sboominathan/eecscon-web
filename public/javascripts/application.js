@@ -30,19 +30,17 @@ $(document).ready(function(){
     if (field != ""){
       $("#field").val(field);
     }
-     
 
-    // console.log($("#year").val());
-    // if ($("#year").val()==""){
-    //   $("#year").selectedIndex = 0;
-    // }
-    
-    // $("#account").click(function(){
-    //    $('#signup-form').hide();
-    //    $('#login-form').show();
-    // })
-    // $("#register").click(function(){
-    //    $('#signup-form').show();
-    //    $('#login-form').hide();
-    // })
+    if ($("#errors a").text() == "Edit Application"){
+        $("#application :input").prop("disabled", true);
+    }
+     
+    $("#errors").click(function(){
+      if ($("#errors a").text() == "Edit Application"){
+        $("#application :input").removeAttr("disabled");
+        $("#errors").hide();
+    }
+
+    })
+
 })

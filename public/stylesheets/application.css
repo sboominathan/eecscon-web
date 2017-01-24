@@ -177,3 +177,23 @@ nav.navbar.navbar-inverse {
   text-decoration: none;
 }
 
+#signout{
+ margin-left: 200px;
+}
+
+#logo{
+  height: 30px;
+  width: 35px;
+  margin-right: 10px;
+}
+
+#subtitle{
+  color: white;
+  font-family: "Montserrat", sans-serif;;
+  font-size: 23px;
+  margin-top: 100px;
+  margin-bottom: -50px;
+
+  /*font-weight: bold;*/
+}
+
