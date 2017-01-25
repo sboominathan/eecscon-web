@@ -75,7 +75,7 @@ router.post('/signup', function(req, res, next) {
             subject: 'Thanks for Signing up for EECScon!', // Subject line
             template: 'signup-email', // html body
             context: {
-              confirmationLink: "localhost:3000/verify/"+username+"/"+confirmationToken,
+              confirmationLink: "eecscon.mit.edu/verify/"+username+"/"+confirmationToken,
               username: username 
             }
         };
@@ -161,7 +161,6 @@ router.get('/verify/:username/:confirmationToken', function(req, res, next){
          });
         res.redirect('/application');
       } else{
-        console.log("hello");
         res.render('signup', {message: 'Login', error: 'Invalid verification link.' });
       }
     }
