@@ -17,15 +17,6 @@ var connection = mysql.createConnection({
   database : config.dbname
 });
 
-connection.connect(function(err) {
-  if (err) {
-    console.error('error connecting: ' + err.stack);
-    return;
-  }
-
-  console.log('connected as id ' + connection.threadId);
-});
-
 /* Setting up transporter for confirmation emails */
 var smtpTransport = nodemailer.createTransport({
    service: "Gmail",  // sets automatically host, port and connection security settings
