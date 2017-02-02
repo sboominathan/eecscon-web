@@ -70,26 +70,19 @@
             <option value="2019">2019</option>
             <option value="2020">2020</option>  
       </select>
-      <select id="course" name="course" value = "{{course}}" required>
-            <option value="" selected disabled >Course *</option>
-            <option value="6-1">6-1</option>
-            <option value="6-2">6-2</option>
-            <option value="6-3">6-3</option>
-            <option value="18">18</option>  
-            <option value="Other">Other</option>  
-      </select>
+      <input type='number' id="course" name="course" value = "{{course}}" required>
     </fieldset>
     <fieldset>
       <legend><span class="number">2</span> EECScon Info </legend>
-      <label for="superurop">Are you doing a SuperUROP? (Required)</label>
+      <label for="superurop">Are you doing a SuperUROP?</label>
       <select id="superurop" name="superurop" value = "{{superurop}}" required>
             <option value="Yes">Yes</option>
             <option value="No">No</option>
       </select>
-      <label for="superurop">If you answered yes to the previous question, who is your faculty advisor?</label>
+      <label for="superurop">Who is your faculty advisor (if relevant)?</label>
       <input type="text" id = "advisor" name="advisor" value="{{advisor}}" placeholder="Faculty Advisor">
       <select id="presentation" name="presentation" value = "{{presentation}}" required>
-            <option value="" disabled selected>Presentation Type *</option>
+            <option value="" disabled selected>Preferred Presentation Type *</option>
             <option value="Oral">Oral</option>
             <option value="Poster">Poster</option>
       </select>
