@@ -420,6 +420,18 @@ hr{
 
  }
 
+ .main-subtitle {
+  color: #f2f6f9; 
+ font-family: 'Montserrat', sans-serif; 
+ font-size: 20px; 
+ font-weight: bold; 
+ letter-spacing: -1px; 
+ line-height: 1; 
+ text-align: center;
+ margin-left: 200px;
+ margin-top: -50px;
+ }
+
  section.flat button {
   color: #fff;
   background-color: #3361FF;
