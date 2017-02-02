@@ -414,8 +414,8 @@ hr{
  letter-spacing: -1px; 
  line-height: 1; 
  text-align: center;
- margin-left: 200px;
- margin-top: -50px;
+ margin-left: 50px;
+ margin-top: 10px;
 
 
  }
@@ -429,7 +429,7 @@ hr{
  line-height: 1; 
  text-align: center;
  margin-left: 200px;
- margin-top: -50px;
+ margin-top: 0px;
  }
 
  section.flat button {
