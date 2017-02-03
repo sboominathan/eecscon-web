@@ -57,10 +57,12 @@ html div, body div {
   position: relative; }
 
 body {
-  background: #1d1d1d;
+  background: #f4f2f2;
+  overflow-x: hidden;
 }
 
 nav.navbar.navbar-inverse {
+
   background-color: #1d1d1d;
   border: none;
   font-size: 1.3em;
@@ -80,6 +82,12 @@ nav.navbar.navbar-inverse {
     nav.navbar.navbar-inverse .navbar-nav li > a:hover {
       color: #99ddff; }
 
+
+@media (min-width: 768px) {
+    .navbar-fixed-top {
+       padding: 0 15px;
+    }
+}
 .scroll{
   background-color: #99ddff;
 }
@@ -93,7 +101,7 @@ nav{
 }
 
 #subtitle{
-  color: white;
+  color: #1d1d1d;
   font-family: "Montserrat", sans-serif;;
   font-size: 23px;
   margin-top: 70px;
@@ -103,7 +111,7 @@ nav{
 }
 
 #main {
-  /*height: 109vh;*/
+  height: 100vh;
   width: 100vw;
   text-align: center;
   padding-top: 30vh; 
@@ -170,7 +178,7 @@ nav{
   padding-bottom: 20vh; 
   margin-top: 0px;
   font-family: "Montserrat", sans-serif;
-  background-color: #ee9b2a;
+  background-color: rgb(246,135,18);
 
 }
 #faq .content {
@@ -403,7 +411,7 @@ hr{
  }
 
  .main-title{
- color: #f2f6f9; 
+ color: #1d1d1d; 
  font-family: 'Montserrat', sans-serif; 
  font-size: 110px; 
  font-weight: bold; 
@@ -419,7 +427,7 @@ hr{
  }
 
  .main-subtitle {
-  color: #f2f6f9; 
+  color: #1d1d1d; 
  font-family: 'Montserrat', sans-serif; 
  font-size: 20px; 
  font-weight: bold; 
@@ -440,19 +448,17 @@ section.flat button {
   color: #fff;
   /*background-color: #3361FF;*/
   background-color: transparent;
-  text-shadow: -1px 1px #417cb8;
   border-style: solid;
+  border-color: #1d1d1d;
   border-width: 3px;
   width: 300px;
   height: 45px;
   font-family: 'Montserrat', sans-serif; 
   font-size: 18px;
   margin-bottom: 15px;
+  color: #1d1d1d;
 }
 
-section.flat button a{
-  color:#fff;
-}
 
 
 section.flat button.flat1{
@@ -469,11 +475,11 @@ section.flat button.flat2{
 }
 
 section.flat button:hover,
-section.flat button.hover {
-  background-color: #e2616e;
-  text-shadow: -1px 1px #27496d;
+section.flat button:hover {
+  background-color: rgb(239,46,50);
+  color: white;
   border: none;
-  opacity: .7 !important;
+  opacity: .9!important;
 
 }
 
@@ -512,7 +518,7 @@ canvas{
   margin-top: 0px;
   margin-bottom: 0px;
   padding-bottom: 150px;
-  background-color: #96ceed;
+  background-color: rgb(81,173,229);
   font-family: "Open Sans", sans-serif;
 }
 #team .content {
@@ -565,8 +571,8 @@ canvas{
 
 #martinez{
   width: 200px;
-  height: 205px;
-  margin-bottom: -17px;
+  height: 190px;
+  margin-bottom: 0px;
 }
 
 #zhou{
@@ -671,7 +677,7 @@ canvas{
 
 #faq-actual{
   padding-top: 120px;
-  background-color: #e2616e;
+  background-color: rgb(239,46,50);
   padding-bottom: 100px;
 }
 
@@ -715,28 +721,28 @@ canvas{
 /*# sourceMappingURL=style.css.map */
 
 .yellow-triangle {
-  height:100vh;
+  height:102vh;
   width:0;
   border-right: 90vw solid transparent;
-  border-bottom: 70vh solid yellow;
+  border-bottom: 70vh solid rgb(256,135,18);
   position:absolute;
   top:0;
   left:0;
 }
 .blue-triangle {
-  height:100vh;
+  height:102vh;
   width:0;
   border-left: 100vw solid transparent;
-  border-bottom: 50vh solid blue;
+  border-bottom: 50vh solid rgb(81,173,229);
   position:absolute;
   top:0;
   right:0;
 }
 .red-triangle {
-  height:100vh;
+  height:102vh;
   width:0;
   border-left: 20vw solid transparent;
-  border-top: 100vh solid red;
+  border-top: 100vh solid rgb(239,46,50);
   position:absolute;
   top:0;
   right:0;
