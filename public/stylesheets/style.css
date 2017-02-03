@@ -350,10 +350,10 @@ footer {
   background-color:  #272727;
   margin-bottom: -15px;}
   footer .icons {
-    color: #99ddff;
+    color: rgb(81,173,229);
     padding-bottom: 5px; }
     footer .icons a {
-      color: #99ddff;
+      color: rgb(81,173,229);
       font-size: .75em;
       display: inline-block;
       margin: 0 5px; }
@@ -361,15 +361,15 @@ footer {
       color: white;
     }
   footer .copyright {
-    color: #99ddff
+    color: rgb(81,173,229);
     font-size: 1em;
     margin: 10px 0 5px 0; }
   footer .elevator {
-    color: #99ddff
+    color: rgb(81,173,229);
     font-size: 0.8em;
     text-decoration: underline; }
     footer a {
-    color:#99ddff;
+    color:rgb(81,173,229);
   }
 
 .dates{
@@ -720,7 +720,7 @@ canvas{
 
 /*# sourceMappingURL=style.css.map */
 
-.yellow-triangle {
+.orange-triangle {
   height:102vh;
   width:0;
   border-right: 90vw solid transparent;
