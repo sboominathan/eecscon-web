@@ -57,7 +57,8 @@ html div, body div {
   position: relative; }
 
 body {
-  background: #1d1d1d; }
+  background: #1d1d1d;
+}
 
 nav.navbar.navbar-inverse {
   background-color: #1d1d1d;
@@ -712,3 +713,32 @@ canvas{
   -webkit-transition: all 300ms; }
 
 /*# sourceMappingURL=style.css.map */
+
+.yellow-triangle {
+  height:100vh;
+  width:0;
+  border-right: 90vw solid transparent;
+  border-bottom: 70vh solid yellow;
+  position:absolute;
+  top:0;
+  left:0;
+}
+.blue-triangle {
+  height:100vh;
+  width:0;
+  border-left: 100vw solid transparent;
+  border-bottom: 50vh solid blue;
+  position:absolute;
+  top:0;
+  right:0;
+}
+.red-triangle {
+  height:100vh;
+  width:0;
+  border-left: 20vw solid transparent;
+  border-top: 100vh solid red;
+  position:absolute;
+  top:0;
+  right:0;
+  z-index:-1;
+}
