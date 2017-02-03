@@ -21,11 +21,11 @@
 }
 
 #logo{
-  height:100px;
-  width: 110px;
-  margin-top: -40px;
-  margin-bottom: -75px;
-  margin-left:-470px;
+  height:55px;
+  width: 63px;
+  /*margin-top: -40px;*/
+  /*margin-bottom: 25px;*/
+  
 }
 
 a {
@@ -95,18 +95,19 @@ nav{
   color: white;
   font-family: "Montserrat", sans-serif;;
   font-size: 23px;
-  margin-top: -190px;
-  margin-bottom: 95px;
-  margin-left: 55px;
+  margin-top: 70px;
+  /*margin-bottom: 25px;*/
+  /*margin-left: 55px;*/
   /*font-weight: bold;*/
 }
 
 #main {
-  height: 109vh;
+  /*height: 109vh;*/
   width: 100vw;
   text-align: center;
   padding-top: 30vh; 
-  padding-bottom: 20vh;}
+  padding-bottom: 20vh;
+  margin-left: 25px;}
 #main .main-header {
   font-weight: 400;
   font-size: 10em;
@@ -368,13 +369,7 @@ footer {
   background-color: #e2616e;
 }
 
-#reuters-logo{
-  height: 175px;
-  width: 250px;
-  padding: 15px;
-  margin-bottom: -10px;
-  margin-top: 15px;
-}
+
 
 a#contact{
   color:white;
@@ -409,13 +404,15 @@ hr{
  .main-title{
  color: #f2f6f9; 
  font-family: 'Montserrat', sans-serif; 
- font-size: 100px; 
+ font-size: 110px; 
  font-weight: bold; 
  letter-spacing: -1px; 
  line-height: 1; 
  text-align: center;
- margin-left: 200px;
- margin-top: -50px;
+ margin-top: -10px;
+ /*margin-left: -70px;*/
+ /*margin-top: -20px;
+ margin-left: -30px;*/
 
 
  }
@@ -432,12 +429,20 @@ hr{
  margin-top: 10px;
  }
 
- section.flat button {
+.heading{
+  /*margin-left: 15px;*/
+  margin-top: -35px;
+  margin-bottom: 15px;
+}
+
+section.flat button {
   color: #fff;
-  background-color: #3361FF;
+  /*background-color: #3361FF;*/
+  background-color: transparent;
   text-shadow: -1px 1px #417cb8;
-  border: 1px white !important;
-  width: 250px;
+  border-style: solid;
+  border-width: 3px;
+  width: 300px;
   height: 45px;
   font-family: 'Montserrat', sans-serif; 
   font-size: 18px;
@@ -450,23 +455,23 @@ section.flat button a{
 
 
 section.flat button.flat1{
-  margin-left: 50px;
-  margin-top: 80px;
+ 
+  margin-top: 50px;
   display: inline-block;
   opacity: .9;
 }
 
 section.flat button.flat2{
-  margin-left: 100px;
-  margin-top: 80px;
+  margin-top: 50px;
   display: inline-block;
   opacity: .9;
 }
 
 section.flat button:hover,
 section.flat button.hover {
-  background-color: #346392;
+  background-color: #e2616e;
   text-shadow: -1px 1px #27496d;
+  border: none;
   opacity: .7 !important;
 
 }
@@ -619,7 +624,7 @@ canvas{
 #presenter-count{
   width: 90px;
   height: 80px;
-  margin-right: 25px;
+  margin-right: 50px;
   text-align: left;
   margin-left: -57px;
   margin-bottom: 50px;
@@ -628,16 +633,17 @@ canvas{
 #attendees-count{
   width: 90px;
   height: 80px;
-  margin-right: 25px;
+  margin-right: 50px;
   margin-left: -50px;
-  margin-bottom: 30px;
+  margin-top: 20px;
 }
 
 #price{
   width: 70px;
   height: 70px;
-  margin-right: 25px;
+  margin-right: 50px;
   margin-left: -40px;
+  margin-top: 60px;
 }
 
 #what{
