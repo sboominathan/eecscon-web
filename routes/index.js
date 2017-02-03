@@ -76,7 +76,7 @@ router.post('/signup', function(req, res, next) {
             template: 'signup-email', // html body
             context: {
               confirmationLink: "eecscon.mit.edu/verify/"+username+"/"+confirmationToken,
-              username: username 
+              name: name 
             }
         };
         smtpTransport.sendMail(mail, function(error, info){
