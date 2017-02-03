@@ -82,12 +82,6 @@ nav.navbar.navbar-inverse {
     nav.navbar.navbar-inverse .navbar-nav li > a:hover {
       color: #99ddff; }
 
-
-@media (min-width: 768px) {
-    .navbar-fixed-top {
-       padding: 0 15px;
-    }
-}
 .scroll{
   background-color: #99ddff;
 }
@@ -103,8 +97,9 @@ nav{
 #subtitle{
   color: #1d1d1d;
   font-family: "Montserrat", sans-serif;;
-  font-size: 23px;
-  margin-top: 70px;
+  font-size: 4vmin;
+
+  margin-top: 8vw;
   /*margin-bottom: 25px;*/
   /*margin-left: 55px;*/
   /*font-weight: bold;*/
@@ -413,7 +408,7 @@ hr{
  .main-title{
  color: #1d1d1d; 
  font-family: 'Montserrat', sans-serif; 
- font-size: 110px; 
+ font-size: 10.5vw; 
  font-weight: bold; 
  letter-spacing: -1px; 
  line-height: 1; 
@@ -426,6 +421,7 @@ hr{
 
  }
 
+ 
  .main-subtitle {
   color: #1d1d1d; 
  font-family: 'Montserrat', sans-serif; 
@@ -451,11 +447,11 @@ section.flat button {
   border-style: solid;
   border-color: #1d1d1d;
   border-width: 3px;
-  width: 300px;
+  width: 27vw;
   height: 45px;
   font-family: 'Montserrat', sans-serif; 
-  font-size: 18px;
-  margin-bottom: 15px;
+  font-size: 3vmin;
+  margin-bottom: 1%;
   color: #1d1d1d;
 }
 
