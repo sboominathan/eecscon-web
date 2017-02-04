@@ -231,8 +231,9 @@ router.post('/apply', function(req,res,next){
             console.log(err);
           }
         });
+        res.redirect("/application");
       }
-      res.redirect("/application");
+      
   });
   
  
