@@ -138,7 +138,7 @@ router.post('/login', function(req, res, next) {
       }
     }
     else{
-      res.render('signup', { title: 'Express' });
+      res.render('signup', { title: 'Express', error: 'Invalid username or password.'});
     }
     });
 });
