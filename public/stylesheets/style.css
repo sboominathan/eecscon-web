@@ -62,7 +62,6 @@ body {
 }
 
 nav.navbar.navbar-inverse {
-
   background-color: #1d1d1d;
   border: none;
   font-size: 1.3em;
@@ -715,7 +714,7 @@ canvas{
 /*# sourceMappingURL=style.css.map */
 
 .orange-triangle {
-  height:102vh;
+  height:100vh;
   width:0;
   border-right: 90vw solid transparent;
   border-bottom: 70vh solid rgb(256,135,18);
@@ -724,21 +723,21 @@ canvas{
   left:0;
 }
 .blue-triangle {
-  height:102vh;
+  height:100vh;
   width:0;
   border-left: 100vw solid transparent;
   border-bottom: 50vh solid rgb(81,173,229);
   position:absolute;
   top:0;
-  right:0;
+  left: 0vw;
 }
 .red-triangle {
-  height:102vh;
+  height:100vh;
   width:0;
   border-left: 20vw solid transparent;
   border-top: 100vh solid rgb(239,46,50);
   position:absolute;
   top:0;
-  right:0;
+  left:80vw;
   z-index:-1;
 }
