@@ -21,8 +21,8 @@
 }
 
 #logo{
-  height:55px;
-  width: 63px;
+  height:6vmax;
+  width: 6vmax;
   /*margin-top: -40px;*/
   /*margin-bottom: 25px;*/
   
@@ -408,7 +408,7 @@ hr{
  .main-title{
  color: #1d1d1d; 
  font-family: 'Montserrat', sans-serif; 
- font-size: 10.5vw; 
+ font-size: 10vw; 
  font-weight: bold; 
  letter-spacing: -1px; 
  line-height: 1; 
@@ -450,8 +450,8 @@ section.flat button {
   width: 27vw;
   height: 45px;
   font-family: 'Montserrat', sans-serif; 
-  font-size: 3vmin;
-  margin-bottom: 1%;
+  font-size: 18px;
+  margin-bottom: 1vw;
   color: #1d1d1d;
 }
 
@@ -461,13 +461,11 @@ section.flat button.flat1{
  
   margin-top: 50px;
   display: inline-block;
-  opacity: .9;
 }
 
 section.flat button.flat2{
   margin-top: 50px;
   display: inline-block;
-  opacity: .9;
 }
 
 section.flat button:hover,
