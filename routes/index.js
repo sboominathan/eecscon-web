@@ -222,6 +222,7 @@ router.post('/apply', function(req,res,next){
   connection.query('INSERT INTO applications SET ?', post, function (err, result) {
       if (err){
         console.log(err);
+        res.render('application', { message: 'Please avoid using any special characters in your application.'});
       } else {
         console.log("new application received");
         req.session.submitted = true;
