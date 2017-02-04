@@ -151,7 +151,7 @@ router.get('/verify/:username/:confirmationToken', function(req, res, next){
     if (rows.length == 1){
 
       var user = rows[0];
-      if (confirmationToken == user['confirmationToken']){
+      if (confirmationToken == user['confirmationToken'] && user['verified']=='False'){
         req.session.user = user['username'];
         
          connection.query("UPDATE users set verified='True' where username ='"+username+"'", function(err,rows){
