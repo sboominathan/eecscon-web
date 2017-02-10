@@ -21,8 +21,8 @@
 }
 
 #logo{
-  height:6vmax;
-  /*width: 6vmax;*/
+  height:5vmax;
+  width: 5.5vmax;
   /*margin-top: -40px;*/
   /*margin-bottom: 25px;*/
   
@@ -44,14 +44,14 @@ a:hover {
   -webkit-transition: all 300ms; }
 
 html, body {
-  height: 100vh;
-  width: 100vw;
+
   padding: 0;
   margin: 0;
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 300; 
-  overflow-x: hidden;}
+  overflow-x:hidden;
+  }
 html section, body section {
   position: relative; }
 html div, body div {
@@ -60,13 +60,14 @@ html div, body div {
 body {
   background: #f4f2f2;
   
+  
 }
 
 nav.navbar.navbar-inverse {
   background-color: #1d1d1d;
   border: none;
   font-size: 1.3em;
-  font-weight: bold; }
+  font-weight: bold;   }
   nav.navbar.navbar-inverse .navbar-nav {
     float: none;
     display: inline-block;
@@ -88,10 +89,12 @@ nav.navbar.navbar-inverse {
 
 nav{
   transition-duration: 1s;
+  overflow-x:hidden;
 }
 
 #navbar-collapse{
   transition-duration: 1s;
+  overflow-x:hidden;
 }
 
 #subtitle{
@@ -99,7 +102,7 @@ nav{
   font-family: "Montserrat", sans-serif;;
   font-size: 4vmin;
 
-  margin-top: 8vw;
+  margin-top: 13vw;
   /*margin-bottom: 25px;*/
   /*margin-left: 55px;*/
   /*font-weight: bold;*/
@@ -107,9 +110,9 @@ nav{
 
 #main {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   text-align: center;
-  padding-top: 30vh; 
+  padding-top: 20vh; 
   padding-bottom: 20vh;
   margin-left: 25px;}
 #main .main-header {
@@ -188,7 +191,6 @@ nav{
 #faq .title{
   color: white;
   font-family: "Lato", Helvetica, sans-serif;
-  margin-right: 25px;
   font-weight: normal;
 }
 #faq .faq-item {
@@ -211,88 +213,6 @@ nav{
 #faq a {
   font-weight: bold;
 }
-
-/*#terms {
-  text-align: center;
-  padding-top: 25vh;
-  padding-bottom: 20vh;
-  width: 50%;
-  float: left;
-  height: 600px;
-  background-color: #e2616e;
-}
-
-#terms .title{
-  color: white;
-  margin-top: -15px;
-  margin-bottom: 10px;
-}
-#terms .content {
-  max-width: 1350px;
-  margin: auto;
-  text-align: center;
-  padding: 0 5vw;
-  padding-bottom: 15px;
-  color: yellow;
-  font-size: 1.25em; 
-}
-#terms .term-item ul {
-  font-size: 0.75em;
-  text-align: center;
-  padding: 5px;
-  color: yellow }
-#terms .term-heading {
-  font-size: 0.9em;
-  text-align: center;
-  font-weight: bold;
-  padding: 15px;
-  color: #99ddff; }
-*/
-
-/*#partners {
-  text-align: center;
-  padding-top: 170px;
-  padding-bottom: 28.25vh;
-  overflow: hidden; 
-  height: 600px;
-  background-color: #e2616e;
-}
-
-#partners .title{
-  color: white;
-  margin-top: 15px;
-  margin-bottom: 10px;
-}
-#partners .content {
-  max-width: 1150px;
-  margin: auto;
-  margin-left: 0px;
-  margin-right:0px;
-  text-align: center;
-  padding: 0 5vw;
-  padding-bottom: 15px;
-  color: yellow;
-  font-size: 1.25em; 
-}
-#partners .partner-item ul {
-  font-size: 0.75em;
-  text-align: center;
-  padding: 5px;
-  color: #99ddff }
-#partners .partner-heading {
-  font-size: 0.9em;
-  text-align: center;
-  font-weight: bold;
-  padding: 15px;
-  color: #99ddff; }
-#partners .partner-text {
-  font-weight: normal;
-
-  text-align: center;
-  color: rgba(242, 246, 249, 0.6);
-  font-size: .8em;
-  padding: 15px;
-}*/
 
 #sponsors {
   text-align: center;
@@ -408,7 +328,7 @@ hr{
  .main-title{
  color: #1d1d1d; 
  font-family: 'Montserrat', sans-serif; 
- font-size: 10vw; 
+ font-size: 10vmax; 
  font-weight: bold; 
  letter-spacing: -1px; 
  line-height: 1; 
@@ -447,10 +367,10 @@ section.flat button {
   border-style: solid;
   border-color: #1d1d1d;
   border-width: 3px;
-  width: 27vw;
+  width: 200px;
   height: 45px;
   font-family: 'Montserrat', sans-serif; 
-  font-size: 18px;
+  font-size: 15px;
   margin-bottom: 1vw;
   color: #1d1d1d;
 }
@@ -535,7 +455,14 @@ canvas{
   font-size: 1.1em;
   padding: 13px;
   color: #404040;
-  margin-bottom: -10px;
+  margin-bottom: -8px;
+   }
+
+  #team .about-description {
+  font-size: 1.1em;
+  padding: 13px;
+  color: #404040;
+  margin-bottom: 10px;
    }
 
 #team a {
@@ -590,61 +517,69 @@ canvas{
 
 }
 
+.statLine{
+  margin-top: 35px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
 #faq .text{
   font-size: 1.2em;
-  text-align: left;
+  text-align: center;
   line-height: 25px;
   font-weight: normal;
 }
 
 #faq .stats{
-  text-align: left;
-  margin-bottom: 30px;
+  color: #1d1d1d;
+  font-size: 15px;
+ /* margin-bottom: 30px;
   margin-left: -100px;
-  padding-right: 50px;
+  padding-right: 50px;*/
 
 }
 
 #faq .stat1{
-  margin-top: 15px;
-  margin-bottom: 75px;
+  margin-top: 25px;
+  /*margin-bottom: 75px;*/
 }
 
 #faq .stat2{
-  margin-bottom: 75px;
+  /*margin-bottom: 75px;*/
 }
 
 #faq .about-subtitle{
   color: white;
-  text-align: left;
+  text-align: center;
+  /*text-align: left;
   margin-left: -100px;
-  margin-bottom: 10px;
+  margin-bottom: 10px;*/
   font-size: 1.25em;
 }
 
 #presenter-count{
   width: 90px;
   height: 80px;
-  margin-right: 50px;
+  /*margin-right: 50px;
   text-align: left;
   margin-left: -57px;
-  margin-bottom: 50px;
+  margin-bottom: 50px;*/
 }
 
 #attendees-count{
   width: 90px;
   height: 80px;
-  margin-right: 50px;
+ /* margin-right: 50px;
   margin-left: -50px;
-  margin-top: 20px;
+  margin-top: 20px;*/
 }
 
 #price{
   width: 70px;
   height: 70px;
-  margin-right: 50px;
+  /*margin-right: 50px;
   margin-left: -40px;
-  margin-top: 60px;
+  margin-top: 60px;*/
 }
 
 #what{

@@ -6,8 +6,9 @@ $(document).ready(function(){
    //  density: 9000,
    // });
    $(window).scroll(function(){
+       console.log('here');
         var scrollPercent = ($(this).scrollTop() / $(document).height()) * 100;
-
+        console.log(scrollPercent);
         if(scrollPercent> 10 && scrollPercent< 25) {
             $("nav").css({"background-color":"#3361FF"});
             $("#navbar-collapse").css({"background-color":"#3361FF"});     

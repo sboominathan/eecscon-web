@@ -26,7 +26,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
+  {{!-- <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
@@ -47,50 +47,26 @@
         </ul>
       </div>
     </div>
-  </nav>
+  </nav> --}}
   <div class='blue-triangle'></div>
   <div class='orange-triangle'></div>
   <div class='red-triangle'></div>
   <div id = "top">
 
-   {{!--  <section id="main">
-      <img id = "logo" src = "images/eecscon-logo.png" />
-      <div class="main-title wow pulse">
-          EECScon
-      </div>
-      <div class='main-subtitle wow pulse'>
-          April 18, 2017
-      </div>
-      <section class="flat">
-        <button id = "login-button" class = "flat1 wow pulse" ><a href = "/login">LOG IN</a></button>
-        <button id = "signup-button" class = "flat2 wow pulse"><a href = "/signup">SIGN UP</a></button>
-      </section>
-    </section>
-    <section id="subtitle">
-      <p class = "wow fadeIn">  MIT's Premier Undergraduate Research Conference  </p>
-    </section> --}}
     <section id = "main">
 
       <div class = "container-fluid">
           <div class = "row heading">
-            {{!-- <div class = "col-md-3"></div> --}}
-
-           {{!--  <div class = "col-md-2">
-              <img id = "logo" src = "images/eecscon-logo.png" /> 
-            </div> --}}
-            <div class="col-md-6 col-md-offset-3 main-title wow pulse">
+            <div class="col-md-12 main-title wow pulse">
               EECSc<img id = "logo" src = "images/eecscon-logo.png" />n
             </div>
-            {{!-- <div class='col-md-11 main-subtitle wow pulse'>
-              April 18, 2017
-            </div> --}}
           </div>
           <div class = "row">
             <section class = "flat">
-              <div class = "col-md-4 col-md-offset-2 col-lg-4">
+              <div class = "col-md-3 col-md-offset-3 col-lg-3">
                 <button id = "login-button" class = "flat1 wow pulse" >LOG IN</button>
               </div>
-              <div class = "col-md-4 col-lg-4">
+              <div class = "col-md-3 col-lg-3">
                 <button id = "signup-button" class = "flat2 wow pulse">SIGN UP</button>
               </div>
             </section>
@@ -162,36 +138,61 @@
             At EECScon, attendees have the unique opportunity of interacting with students presenting and discussing their passions. This engaging environment allows companies to successfully recruit MIT’s best and brightest students through a “reverse” career fair, and faculty to learn about some of the diverse research done at MIT. For more information about the conference, or if you wish to sponsor EECScon, please contact eecscon-chairs@mit.edu.
           </div>
         </div>
-        <div class = "col-md-2">
-          <div class = "about-answer ">
-           <img id = "presenter-count" src = "images/presenter_count.png" />
+        <div class = "col-md-4">
+          <div class = "row statLine">
+            <div class = "about-answer col-md-5">
+             <img id = "presenter-count" src = "images/presenter_count.png" />
+            </div>
+            <div class = "about-subtitle col-md-6">
+             PRESENTERS<br>
+             <p class = "stats stat1"> More than 70 oral and poster presenters </p>
+             
+            </div>
           </div>
-          <div class = "about-answer ">
+          <div class = "row statLine">
+            <div class = "about-answer col-md-5">
+             <img id = "attendees-count" src = "images/attendees_count.png" />
+            </div>
+            <div class = "about-subtitle col-md-6">
+             ATTENDEES<br> 
+             <p class = "stats stat2"> Over 300 industry, academia, and community attendees </p>
+            </div>
+          </div>
+           <div class = "row statLine">
+            <div class = "about-answer col-md-5">
+             <img id = "attendees-count" src = "images/price.png" />
+            </div>
+            <div class = "about-subtitle col-md-6">
+             PRICE<br> 
+             <p class = "stats stat3"> EECScon is free to attend! </p>
+            </div>
+          </div>
+          {{!-- <div class = "about-answer ">
            <img id = "attendees-count" src = "images/attendees_count.png" />
           </div>
           <div class = "about-answer ">
            <img id = "price" src = "images/price.png" />
-          </div>
+          </div> --}}
         </div>
         <div class = "col-md-2">
-          <div class = "about-subtitle">
+         {{!--  <div class = "about-subtitle">
            PRESENTERS
           </div>
           <div class = "about-answer stats stat1">
             More than 70 oral and poster presenters
-          </div>
-          <div class = "about-subtitle">
+          </div> --}}
+          {{!-- <div class = "about-subtitle">
            ATTENDEES
           </div>
           <div class = "about-answer stats stat2">
             Over 300 industry, academia, and community attendees
-          </div>
-          <div class = "about-subtitle">
+          </div> --}}
+         {{!--  <div class = "about-subtitle">
            PRICE
           </div>
           <div class = "about-answer stats stat3">
             EECScon is free to attend!
-          </div>
+          </div> --}}
         </div>
       </div>
     </div>
@@ -256,63 +257,6 @@
     <div class = "faq-answer ">
       Drop us an <a href = "mailto:eecscon-chairs@mit.edu">email</a> at eecscon-chairs@mit.edu and we’ll be glad to talk it over!
     </div>
-    {{!-- <div class = "container-fluid">
-      <div class = "row">
-        <div class = "col-md-1"></div>
-        <div class = "col-md-3">
-          <div class = "about-answer ">
-            When will abstract submission open?
-          </div>
-          <div class = "about-answer ">
-            Submissions for EECScon 2017 have opened - sign up above to submit an abstract!
-          </div>
-        </div>
-        <div class = "col-md-4">
-          <div class = "about-answer ">
-            What are the requirements?
-          </div>
-          <div class = "about-answer ">
-            We suggest at least one term of research experience, such as part-time work in the fall or full-time research over IAP. This usually provides enough depth of research to allow you to make a good poster or oral presentation. Please note that your research may be incomplete by the abstract deadline (February 21), but it must be ready a few weeks before the conference (early April).
-          </div>
-        </div>
-        <div class = "col-md-3">
-          <div class = "about-answer ">
-            Am I eligible?
-          </div>
-          <div class = "about-answer ">
-              Any undergraduate student is eligible to submit and present at EECScon! Although we originally targeted course 6 students, we'd love to have you present your research regardless of your major.
-          </div>
-        </div>
-    </div>
-    <div class = "row">
-        <div class = "col-md-1"></div>
-        <div class = "col-md-3">
-          <div class = "about-answer ">
-            Can first year students submit abstracts?
-          </div>
-          <div class = "about-answer ">
-            YES! We strongly encourage any undergraduate student with research experience to apply to EECScon. Every year, we’ve had a number of first-year students present on their research. In fact, one year the oral presentation winner was a first-year student.
-          </div>
-        </div>
-        <div class = "col-md-4">
-          <div class = "about-answer ">
-            What should the abstract contain?
-          </div>
-          <div class = "about-answer ">
-            Abstracts must be no longer than 250 words and should introduce the context of the work (including research question/problem), an outline of the solution's approach, and results/data (if any).
-          </div>
-        </div>
-        <div class = "col-md-3">
-          <div class = "about-answer ">
-            How does the review process work?
-          </div>
-          <div class = "about-answer ">
-             All submissions will automatically be considered for the poster session, and you will have the option to additionally be considered to give one of a few oral presentations. Accepted students will have the opportunity to be given help from graduate student mentors.
-          </div>
-        </div>
-
-    </div>
-  </div> --}}
   </section>
 
 <section id="team" >
@@ -330,7 +274,7 @@
           <div class="about-answer">
                      Faculty Advisor
           </div>
-           <div class="about-answer ">
+           <div class="about-description ">
                      Professor Joel Voldman is a principal investigator in the Research Laboratory of Electronics (RLE) at MIT. His research group focuses on microfluidics applied to cell biology.
           </div>
         </div>
@@ -343,7 +287,7 @@
           <div class="about-answer ">
                       Administrative Assistant
           </div>
-           <div class="about-answer ">
+           <div class="about-description">
                      Chad Collins, Administrative Assistant for the RLE Computational Prototyping Group, joined RLE in the Fall of 2001.
           </div>
         </div>
@@ -356,7 +300,7 @@
           <div class="about-answer  ">
                       Co-chair
           </div>
-           <div class="about-answer ">
+           <div class="about-description ">
                       Liang is a junior studying EECS (6-2) and BCS (9) at MIT. He is interested in computational neuroscience and cognitive science.
           </div>
         </div>
@@ -369,69 +313,13 @@
           <div class="about-answer">
                      Co-chair
           </div>
-          <div class="about-answer">
+          <div class="about-description">
                       Dominik is a sophomore studying EECS (6-2) at MIT. He is currently doing research in the MIT Media Lab.
           </div>
         </div>
     </div>
   </div>
   </section>
-
-{{!-- 
-  <div class = "dates">
-    <a name="terms"></a>
-    <section id="terms">
-      <div class="title">
-        Timeline
-      </div>
-      <div class="content">
-        <div class="term-item">
-          <div class="term-heading">
-           Early February 2017: Applications Open
-          </div>    
-        </div>
-        <hr width="200" size = "10">
-        <div class="term-item">
-          <div class="term-heading">
-           Late February 2017: Application deadline
-          </div>
-        </div>
-        
-        <hr width="200" size = "10">
-        <div class="term-item">
-          <div class="term-heading">
-           April 18, 2017: EECScon 2017
-        </div>
-      </div>
-    </section>
-
-    <section id = "border">
-    </section>
-   <section id = "partners">
-      <div class="title">
-        Sponsors
-      </div>
-      <div class="content">
-        <div class="partner-item">
-          <div class="partner-heading">
-           MIT EECS Department
-          </div>
-        </div>
-        <div class="partner-item">
-          <div class="partner-heading">
-           MIT Lincoln Labs
-          </div>
-        </div>
-       
-        <div class="partner-item">
-          <div class="partner-text">
-           Looking to partner with EECScon?  Please contact us through <a id = "contact" href="mailto:eecscon-sponsors@mit.edu">email</a>!
- 
-          </div>
-        </div>
-      </div>
-    </section>
-</div> --}}
 
 
   <section id="sponsors">
