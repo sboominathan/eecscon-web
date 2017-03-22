@@ -212,13 +212,6 @@ nav{
   font-weight: bold;
 }
 
-a#rsvp {
-  color: #808080;
-}
-a#rsvp:hover {
-  color: rgb(239,46,50);
-}
-
 /*#terms {
   text-align: center;
   padding-top: 25vh;
