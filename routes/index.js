@@ -37,8 +37,11 @@ var options = {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Home Page' });
+});
 
+router.get('/schedule', function(req, res, next) {
+  res.render('schedule', { title: 'Schedule' });
 });
 
 // router.post('/signup', function(req, res, next) {
