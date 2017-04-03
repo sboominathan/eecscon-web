@@ -843,3 +843,11 @@ canvas{
 .logo-container {
     line-height: 30px;
 }
+
+.masterworks {
+  color: rgb(81,173,229);
+}
+
+.masterworks:hover {
+  color: #4b4f56;
+}
