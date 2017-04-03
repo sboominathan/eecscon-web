@@ -44,9 +44,9 @@ router.get('/schedule', function(req, res, next) {
   res.render('schedule', { title: 'Schedule' });
 });
 
-router.get('/abstracts', function(req, res, next) {
-  res.render('abstracts', { title: 'Abstracts' });
-});
+// router.get('/abstracts', function(req, res, next) {
+//   res.render('abstracts', { title: 'Abstracts' });
+// });
 
 // router.post('/signup', function(req, res, next) {
 //   var name = req.body.studentname;
