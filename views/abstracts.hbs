@@ -52,30 +52,65 @@
 
   <!-- TODO change schedule ids to abstract ids; fill in abstracts -->
 
-  <section id='schedule-container'>
+  <section id='abstracts-container'>
+    <div id='abstracts'>
+      <ul>
+      <h2 id='abstracts-heading'>EECScon 2017 Oral Abstracts</h2>
+        <li>
+          <ul>
+          <li> Suma Anand </li>
+          <li> This project concerns the development of a mobile sonar unit that uses ultrasound to sample the environment. The device could be used as an aid for blind and visually impaired users or as a tool in neuroscientific studies of human auditory perception. In its current design, the device enables users to distinguish object location along a horizontal plane (azimuth) using binaural stereo cues; however, the device does not offer the spectral cues that provide elevation information. The pinna, or external part of the ear, encodes such spectral cues, but the ultrasonic frequency range of the device precludes using the user's natural pinna for this task. Previous research has shown that, although modifying the pinna alters spectral cues, with training, users can relearn to perceive elevation normally [2]. We hypothesize, therefore, that (1) adding an ear-like external receiver assembly to the device will spatially filter incoming signals, and that (2) users can learn to map the frequency-shifted input spectra to perceived elevations. In this project, we present a computational pipeline to design, simulate, fabricate, and test the external receiver assembly. The receivers are designed iteratively through a simulation and optimization process using finite element analysis. </li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+          <li> Landon Carter </li>
+          <li> Current 3D printing technology has enabled a huge variety of advances and has been an incredible benefit to robot designers, allowing for rapid iteration. One goal of robotics is to reduce human toil in design and manufacturing. We can apply this principle to robotics itself by applying optimization algorithms to generation of simple robotics systems. We will then utilize modern 3D printing technology to directly realize these designs with minimal post-manufacture assembly. Our lab has already developed a 3D-printable hydraulic bellows system to allow for muscle-like actuation. The goal of this project is to couple that 3D printed hydraulic bellows system with a leg geometry engine to allow end-to-end automated 3D printed robot design. Current work in this area has focused on human-guided robotic design or linkage design for animation. However, neither of these allows an end-to-end robot generation system independent of human input or capable of direct 3D printing output. We have made progress in developing an end-to-end robot generation system. The primary component of this is a software package to produce 3D-printable files from a leg geometry optimization algorithm. This software includes linkage construction, allowing legs to be coupled together both physically and hydraulically. Ultimately, this will allow for a complete, functional 3D-printed robot that requires no assembly beyond addition of motors and sensors.     </li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+          <li> William Moses </li>
+          <li> "This talk explores how fork-join parallelism, as supported by dynamic-multithreading concurrency platforms such as Cilk and OpenMP, can be embedded into a compiler's intermediate representation (IR). Mainstream compilers typically treat parallel linguistic constructs as syntactic sugar for function calls into a parallel runtime. These calls prevent the compiler from performing optimizations across parallel control flow. Remedying this situation, however, is generally thought to require an extensive reworking of compiler analyses and code transformations to handle parallel semantics.
+  
+          Tapir is a compiler IR that represents logically parallel tasks asymmetrically in the program's control flow graph. Tapir allows the compiler to optimize across parallel control flow with only minor changes to its existing analyses and code transformations. To prototype Tapir in the LLVM compiler, for example, we added or modified approximately 5000 lines of LLVM's approximately 3-million-line codebase. Tapir enables many traditional compiler optimizations for serial code, including loop-invariant-code motion, common-subexpression elimination, and tail-recursion elimination, to optimize across parallel control flow, as well as purely parallel optimizations.
+          
+          This work was conducted in collaboration with Tao B. Schardl and Charles E. Leiserson." </li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+          <li> Ebenezer Nkwate </li>
+          <li> Genetic circuits provide the ability to control various cellular pathways occurring in living things. In the human heart, synthetic genetic circuits can enable us prevent diseases and improve favorable processes through gene therapy. Nevertheless, this is only possible if we understand how the genetic circuitry in the heart works. The research goal is to explore logic gates that exist at various stages of the heart's life cycle to develop new and simple AND gate designs which will fuel the development of component libraries for synthetic heart circuits. This is achieved by using ribosomal self-cleavage and microRNAs to reduce the size of induced genetic material. </li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+          <li> Ajay Saini </li>
+          <li> In recent years, technology startups have become very prevalent in society due to the immense impact that they have on capital markets. The question of how to predict the probability of success of a startup is crucial to problems in fields such as portfolio optimization and business strategy. In previous works, researchers have found that by using multiple data sources to build interaction networks, it is possible to both understand and model an underlying system in a way that yields powerful predictions about the system. The goal of this work is to use online data to build a network-based model of the startup ecosystem that is able to make probabilistic predictions about whether or not a startup will either be acquired or go public in a given time period. We begin by presenting our data collection and feature extraction method which is uses both Crunchbase and LinkedIn data to build feature vectors predictive of each company's success. We then present the modeling approach which uses the hitting times of Brownian motion to represent the funding milestones of a company and conclude by discussing portfolio optimization results.    </li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+          <li> Valerie Sarge </li>
+          <li> Super-resolution as a technology has the potential to improve users' computer graphics and enable the use of high-resolution (4K or 8K) screens in many contexts without a loss of quality in viewing existing lower-resolution content. Currently, performing super-resolution on a single frame can take on the order of a second. The purpose of this project is to produce an efficient and accurate embedded-systems implementation of a super-resolution algorithm which takes advantage of syntax elements and similarities between frames to accelerate existing machine-learning approaches. This implementation will receive HEVC-encoded video files as input and output upsampled frames. After postprocessing, a successful system should be able to produce and play high-resolution video in real time.    </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+    <section id='schedule-container'>
     <div id='schedule'>
       <ul>
-      <h2 id='schedule-heading'>EECScon 2017 Abstracts</h2>
+      <h2 id='schedule-heading'>EECScon 2017 Poster Abstracts</h2>
         <li>
-          <div class='time'>
-            <div class='start-time'>11:30PM</div>
-            <div class='end-time'>12:00PM</div>
-          </div>
-          <div class='event'>Check In and Lunch</div>
+        Stuff
         </li>
         <li>
-          <div class='time'>
-            <div class='start-time'>12:00PM</div>
-            <div class='end-time'>1:15PM</div>
-          </div>
-          <div class='event'>Oral Presentations</div>
+        More Stuff
         </li>
         <li>
-          <div class='time'>
-            <div class='start-time'>1:15PM</div>
-            <div class='end-time'>3:00PM</div>
-          </div>
-          <div class='event'>Poster Presentations</div>
+        More Stuff
         </li>
         <li>
           <div class='time'>
@@ -87,6 +122,7 @@
       </ul>
     </div>
   </section>
+
     Under construction...
 </body>
       
