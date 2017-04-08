@@ -38,6 +38,8 @@ app.use(session({
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/schedule', routes);
+app.use('/abstracts', routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -69,8 +71,5 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
-
-
-
 
 module.exports = app;
