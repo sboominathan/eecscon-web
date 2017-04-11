@@ -851,6 +851,14 @@ canvas{
   color: #4b4f56;
 }
 
+.abstracts-link {
+  color: rgb(239,46,50);
+}
+
+.abstracts-link:hover {
+  color: #4b4f56;
+}
+
 /* Abstracts CSS stuff */
 
 #abstracts-container {
