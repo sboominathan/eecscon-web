@@ -748,7 +748,7 @@ canvas{
 }
 
 #schedule-container {
-  margin: 132px 30px 0 30px;
+  margin: 132px 30px 50px 30px;
   width: 500px;
   display: inline-block;
 }
@@ -804,7 +804,7 @@ canvas{
 @media only screen and (max-width: 720px) {
   #schedule-container {
       width: 95%;
-      margin: 100px 0 0 0;
+      margin: 100px 0 50px 0;
       display: inline-block;
   }
 }
