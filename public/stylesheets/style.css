@@ -878,11 +878,6 @@ canvas{
   padding: 0;
 }
 
-/*
-#abstracts ul li {
-  padding: 20px 0px;
-  font-size: 1em;
-} */
 
 li.abstracts-name{
   padding: 20px 0px;
@@ -922,6 +917,7 @@ li.abstracts-body{
   margin: 0;
   padding-bottom: 10px;
 }
+
 
 #poster {
   padding-top: 30px;
