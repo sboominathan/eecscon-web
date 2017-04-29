@@ -40,12 +40,16 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Home Page' });
 });
 
-router.get('/schedule', function(req, res, next) {
-  res.render('schedule', { title: 'Schedule' });
+// router.get('/schedule', function(req, res, next) {
+//   res.render('schedule', { title: 'Schedule' });
+// });
+
+router.get('/abstracts/', function(req, res, next) {
+   res.render('abstracts', { title: 'Abstracts' });
 });
 
- router.get('/abstracts', function(req, res, next) {
-   res.render('abstracts', { title: 'Abstracts' });
+router.get('/winners/', function(req, res, next) {
+   res.render('winners', { title: 'Winners' });
 });
 
 // router.post('/signup', function(req, res, next) {
