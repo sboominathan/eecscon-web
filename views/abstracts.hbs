@@ -3,12 +3,12 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="images/eecscon-logo.png" />
+  <link rel="shortcut icon" href="/images/eecscon-logo.png" />
   <title> EECScon 2017</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <link href="stylesheets/style.css" rel='stylesheet' type='text/css' />
-  <link href="stylesheets/animate.css" rel='stylesheet' type='text/css' />
+  <link href="/stylesheets/style.css" rel='stylesheet' type='text/css' />
+  <link href="/stylesheets/animate.css" rel='stylesheet' type='text/css' />
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css' />
   <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,900' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet" type='text/css'>
@@ -32,13 +32,14 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="logo-container" href='/'><img class="navbar-logo" src='images/eecscon-logo.png'></a>
+        <a class="logo-container" href='/'><img class="navbar-logo" src='/images/eecscon-logo.png'></a>
       </div>
 
       <div class="collapse navbar-collapse" id="navbar-collapse">
         <ul class="nav navbar-nav">
           <li><a href="/">HOME</a></li>
-          <li><a href="/schedule">SCHEDULE</a><li>
+          <!-- <li><a href="/schedule">SCHEDULE</a><li> -->
+          <li><a href="/winners">WINNERS</a></li>
           <li><a href="/abstracts">ABSTRACTS</a><li>
         </ul>
       </div>
@@ -49,20 +50,20 @@
     <div class='orange-triangle'></div>
     <div class='red-triangle'></div>
   </div>
-
-  <section id='abstracts-container'>
-    <div class='abstracts' id='oral'>
+  <section id='navbar-space'></section>
+  <section id='container'>
+    <div class='abstracts' id='sub-container'>
       <ul>
       <h2 id='abstracts-heading'>Oral Abstracts</h2>
         <li>
           <ul>
-          <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> | Ebenezer Nkwate | <i>Genetic Logic Gates for Heart Disease Treatment</i></li>
+          <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> | Ebenezer Nkwate | <i>Genetic Logic Gates for Heart Disease Treatment</i></li>
           <li> Genetic circuits provide the ability to control various cellular pathways occurring in living things. In the human heart, synthetic genetic circuits can enable us prevent diseases and improve favorable processes through gene therapy. Nevertheless, this is only possible if we understand how the genetic circuitry in the heart works. The research goal is to explore logic gates that exist at various stages of the heart's life cycle to develop new and simple AND gate designs which will fuel the development of component libraries for synthetic heart circuits. This is achieved by using ribosomal self-cleavage and microRNAs to reduce the size of induced genetic material. </li>
           </ul>
         </li>
         <li>
           <ul>
-          <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> | William Moses | <i>Tapir: Embedding Fork-Join Parallelism in LLVM IR</i></li>
+          <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> | William Moses | <i>Tapir: Embedding Fork-Join Parallelism in LLVM IR</i></li>
           <li> This talk explores how fork-join parallelism, as supported by dynamic-multithreading concurrency platforms such as Cilk and OpenMP, can be embedded into a compiler's intermediate representation (IR). Mainstream compilers typically treat parallel linguistic constructs as syntactic sugar for function calls into a parallel runtime. These calls prevent the compiler from performing optimizations across parallel control flow. Remedying this situation, however, is generally thought to require an extensive reworking of compiler analyses and code transformations to handle parallel semantics.
   
           Tapir is a compiler IR that represents logically parallel tasks asymmetrically in the program's control flow graph. Tapir allows the compiler to optimize across parallel control flow with only minor changes to its existing analyses and code transformations. To prototype Tapir in the LLVM compiler, for example, we added or modified approximately 5000 lines of LLVM's approximately 3-million-line codebase. Tapir enables many traditional compiler optimizations for serial code, including loop-invariant-code motion, common-subexpression elimination, and tail-recursion elimination, to optimize across parallel control flow, as well as purely parallel optimizations.
@@ -72,36 +73,36 @@
         </li>
         <li>
           <ul>
-          <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> | Valerie Sarge | <i>Accelerating Super-Resolution with Video Compression</i></li>
+          <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> | Valerie Sarge | <i>Accelerating Super-Resolution with Video Compression</i></li>
           <li> Super-resolution as a technology has the potential to improve users' computer graphics and enable the use of high-resolution (4K or 8K) screens in many contexts without a loss of quality in viewing existing lower-resolution content. Currently, performing super-resolution on a single frame can take on the order of a second. The purpose of this project is to produce an efficient and accurate embedded-systems implementation of a super-resolution algorithm which takes advantage of syntax elements and similarities between frames to accelerate existing machine-learning approaches. This implementation will receive HEVC-encoded video files as input and output upsampled frames. After postprocessing, a successful system should be able to produce and play high-resolution video in real time.    </li>
           </ul>
         </li>
         <li>
           <ul>
-          <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> | Ajay Saini | <i>Using Online Data to Predict Startup Success</i></li>
+          <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> | Ajay Saini | <i>Using Online Data to Predict Startup Success</i></li>
           <li> In recent years, technology startups have become very prevalent in society due to the immense impact that they have on capital markets. The question of how to predict the probability of success of a startup is crucial to problems in fields such as portfolio optimization and business strategy. In previous works, researchers have found that by using multiple data sources to build interaction networks, it is possible to both understand and model an underlying system in a way that yields powerful predictions about the system. The goal of this work is to use online data to build a network-based model of the startup ecosystem that is able to make probabilistic predictions about whether or not a startup will either be acquired or go public in a given time period. We begin by presenting our data collection and feature extraction method which is uses both Crunchbase and LinkedIn data to build feature vectors predictive of each company's success. We then present the modeling approach which uses the hitting times of Brownian motion to represent the funding milestones of a company and conclude by discussing portfolio optimization results.    </li>
           </ul>
         </li>
         <li>
           <ul>
-          <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> | Suma Anand | <i>Biomimetic Receivers for Ultrasonic Echolocation</i></li>
+          <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> | Suma Anand | <i>Biomimetic Receivers for Ultrasonic Echolocation</i></li>
           <li class="abstracts-body"> This project concerns the development of a mobile sonar unit that uses ultrasound to sample the environment. The device could be used as an aid for blind and visually impaired users or as a tool in neuroscientific studies of human auditory perception. In its current design, the device enables users to distinguish object location along a horizontal plane (azimuth) using binaural stereo cues; however, the device does not offer the spectral cues that provide elevation information. The pinna, or external part of the ear, encodes such spectral cues, but the ultrasonic frequency range of the device precludes using the user's natural pinna for this task. Previous research has shown that, although modifying the pinna alters spectral cues, with training, users can relearn to perceive elevation normally [2]. We hypothesize, therefore, that (1) adding an ear-like external receiver assembly to the device will spatially filter incoming signals, and that (2) users can learn to map the frequency-shifted input spectra to perceived elevations. In this project, we present a computational pipeline to design, simulate, fabricate, and test the external receiver assembly. The receivers are designed iteratively through a simulation and optimization process using finite element analysis. </li>
           </ul>
         </li>
         <li>
           <ul>
-          <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> | Landon Carter | <i>Computational Design for Printable Hydraulic Robots</i></li>
+          <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> | Landon Carter | <i>Computational Design for Printable Hydraulic Robots</i></li>
           <li> Current 3D printing technology has enabled a huge variety of advances and has been an incredible benefit to robot designers, allowing for rapid iteration. One goal of robotics is to reduce human toil in design and manufacturing. We can apply this principle to robotics itself by applying optimization algorithms to generation of simple robotics systems. We will then utilize modern 3D printing technology to directly realize these designs with minimal post-manufacture assembly. Our lab has already developed a 3D-printable hydraulic bellows system to allow for muscle-like actuation. The goal of this project is to couple that 3D printed hydraulic bellows system with a leg geometry engine to allow end-to-end automated 3D printed robot design. Current work in this area has focused on human-guided robotic design or linkage design for animation. However, neither of these allows an end-to-end robot generation system independent of human input or capable of direct 3D printing output. We have made progress in developing an end-to-end robot generation system. The primary component of this is a software package to produce 3D-printable files from a leg geometry optimization algorithm. This software includes linkage construction, allowing legs to be coupled together both physically and hydraulically. Ultimately, this will allow for a complete, functional 3D-printed robot that requires no assembly beyond addition of motors and sensors.     </li>
           </ul>
         </li>
       </ul>
     </div>
-  <div class='abstracts' id='poster'>
+  <div class='abstracts' id='sub-container'>
     <ul>
     <h2 id='abstracts-heading'>Poster Abstracts</h2>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 1 | Mohamed Kane </li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 1 | Mohamed Kane </li>
         <li class="abstracts-body"> Given an image of a woman walking her dog, current computer vision systems can locate the
         woman, her dog and generate a caption such as "A woman walking her dog in a park" with high accuracy. 
         The goal of this research project is to go in the reverse direction and, given a high
@@ -117,19 +118,19 @@
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 2 | Heeyoon Kim | <i>Teaching Machines How to Read Cancer Articles</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 2 | Heeyoon Kim | <i>Teaching Machines How to Read Cancer Articles</i></li>
         <li class="abstracts-body"> Cancer types with certain mutations are highly correlated with other types of cancers. Such correlations are currently heavily researched and the number of scientific publications on the topic is increasing every year. The goal of this project is to automatically select and rank medical journals, by implementing classifiers and clustering algorithms. A further goal of this project is to automatically filter out key components of the journal articles, by using information extraction techniques. Currently, all of these processes are done manually, which is unsustainable given the increasing amounts of data being published. It's expected that the project will significantly reduce time for these processes. </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 3 | Alex  LaGrassa | <i>Teaching Robots to Understand Natural Language Tasks</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 3 | Alex  LaGrassa | <i>Teaching Robots to Understand Natural Language Tasks</i></li>
         <li class="abstracts-body"> Active reference resolution is the process of a robot determining which object the human wants. Due to incomplete information and a noisy environment, the robot needs to carry out observations to determine which object, if any, satisfies the expression. We describe and implement a system where an expression from a human is parsed into an easily evaluated recursive formal expression, then finding an object that satisfies the expression is incorporated into a high level plan. The language needs to describe properties of the object, including properties that involve multiple objects. Furthermore, the language needs to be connected to a set of actions that promise that one of those properties will be known with better certainty after carrying out the action. As a result, the robot can determine what it needs to do to solve the denotation. We implemented ways of describing, observing, and making conclusions about color, spatial relationships, shapes, and weight. The system was tested in a simple discrete domain, a continuous simulated domain, and in the physical world with a PR2.    </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 4 | Dina Levy-Lambert | <i>Visualizing Patient Care in the Intensive Care Unit</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 4 | Dina Levy-Lambert | <i>Visualizing Patient Care in the Intensive Care Unit</i></li>
         <li class="abstracts-body"> <p> In recent years, Electronic Health Records (EHRs) have increasingly been incorporated in medical practices and hospitals. EHRs contain a multitude of data, including patient medical histories, medications, treatments, and, in inpatient settings such as the intensive care unit (ICU), physiological time-series and lab test results. These many different types of data tend to be too numerous to interpret easily. Visualizations can enable clinicians and researchers to gain a better understanding of the different types of available data and how they fit together. </p>
   
         <p> Our visualization integrates patient timelines in the ICU (including vital signs, lab results, and intervention administration) with rolling risk estimates from a predictive model for adverse outcomes. We demonstrate our visualization tool on the Medical Information Mart for Intensive Care (MIMIC) III, an openly available database composed of ICU EHR data from the Beth Israel Deaconess hospital in Boston, Massachusetts. Our tool enables researchers to search for patient cohorts fitting specific criteria and to explore the rich data associated with their hospital stays. Our patient-centered visualization enables researchers to investigate how their predictive model risk estimates correlate with physiological changes and interventions while in the ICU. </p> 
@@ -138,7 +139,7 @@
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 5 | Lucas Morales | <i>Automatic Least-Effort Contextual Learning</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 5 | Lucas Morales | <i>Automatic Least-Effort Contextual Learning</i></li>
         <li class="abstracts-body">
         <p> In the field of artificial intelligence, most learning mechanisms are either inherently spe- cialized or have a flat knowledge base that makes them only useful when confined to a single domain, reducing the capability of both handling complex problems and specializing in multiple domains. This project is to design a contextual knowledge system and that easily fits a knowledge abstraction for use by various learning mechanisms. The resulting system provides automatic compositionality for learning mechanisms which rely on knowledge artifacts, enabling rapid learning of rich models. </p>
         </li>
@@ -146,50 +147,50 @@
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 6 | Liang Zhou | <i>Faulty Towers: a Counterfactual Simulation Model of Physical Support</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 6 | Liang Zhou | <i>Faulty Towers: a Counterfactual Simulation Model of Physical Support</i></li>
         <li class="abstracts-body"> We extend a counterfactual simulation model (CSM) - originally developed to capture causal judgments about dynamic events - to explain judgments of physical support. The CSM predicts that people judge physical support by mentally simulating what would happen if the object of interest were removed. Two experiments test the model by asking participants to evaluate the extent to which one brick in a tower is responsible for the rest of the bricks staying on the table. The results of both experiments show a very close correspondence between counterfactual simulations and responsibility judgments. We compare three versions of the CSM which differ in how they model people's uncertainty about what would have happened. Participants' selections of which bricks would fall are best explained by assuming that counterfactual interventions only affect some aspects while leaving the rest of the scene unchanged.    </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 7 | Denis Li | <i>Development of a Consolidator Module for an Acoustic Cue-based Speech Recognition System</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 7 | Denis Li | <i>Development of a Consolidator Module for an Acoustic Cue-based Speech Recognition System</i></li>
         <li class="abstracts-body"> Speech recognition has typically been done via statistical methods. Unfortunately, these methods require tremendous amounts of training and data resources. Furthermore, they do not model the way in which humans actually perceive speech. The MIT Speech Communications Group has been working on an automatic speech recognition (ASR) system that avoids these issues. It is based on a model of human speech perception (involving special spectral events called landmarks) proposed by Kenneth Stevens. This research paper will discuss the advances made in the aforementioned ASR system; especially in a component called the consolidator. The performance of the consolidator and the overall system will be assessed with data sets of varying degrees of complexity.     </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 8 | Jimmy Wu | <i>Object Detection for Robotic Systems</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 8 | Jimmy Wu | <i>Object Detection for Robotic Systems</i></li>
         <li class="abstracts-body"> The field of robotics is becoming an increasingly active area of research and development, with applications ranging from warehouse automation to self-driving cars. Even with recent breakthroughs, there is still a large gap between robotic and human-level capabilities. One of the key challenges in robotics is 3D object detection, which enables robots to recognize and accurately pinpoint objects of interest in the surrounding environment. Current 3D object detection systems used in robotics are typically composed of complicated multi-stage pipelines that combine 2D object detection with iterative 3D model alignment techniques to generate 3D pose estimates. In this project, we propose an end-to-end convolutional neural network for real-time 3D object pose estimation directly from input visual sensor data.     </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 9 | Helen Zhou </li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 9 | Helen Zhou </li>
         <li class="abstracts-body"> Traditionally, machine learning techniques involve training on a single type of data and making predictions accordingly. In reality, however, people's decisions are influenced by a variety of channels. When one chooses to go to the store and buy soup, one could be doing so because of the flu, the rainy weather, a recommendation from a friend, or even a recent diet craze. When it comes to predicting our interactions with food, all of these influences can serve as valuable signals. This project aims to understand and even predict food purchases and recipes by: (1) visualizing data from the purchase and recipe domains, and (2) combining information from multiple 'modalities,' or channels of information (such as tweets, news, weather, census data, and product descriptions). Multimodal learning, which fuses data from multiple modalities to create a more robust representation of input data, is a relatively new machine learning technique, and has been shown to improve over performance with just one modality. In this project, we start with data from two modalities, tweets and news, and combine their vector representations into a shared representation. This shared representation is then fed into a deep neural network in order to make predictions about food purchases and recipes.
          </li>
          </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 10 | Andreea Bobu | <i>Representations of Leukoaraiosis in Clinical Brain Images</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 10 | Andreea Bobu | <i>Representations of Leukoaraiosis in Clinical Brain Images</i></li>
         <li class="abstracts-body"> Ischemic stroke, the most common cerebrovascular disease, is the leading cause of death and debilitating injury in the United States. For this reason, clinical and scientific studies for stroke prognosis and treatment are crucial. However, due to stroke's high variability in where and how it forms in the brain, it is difficult to identify spatial patterns or make location or severity predictions. As such, it is also important to study different cerebrovascular diseases that could be correlated with stroke outcome but are easier to analyze. One such example is leukoaraiosis (non-specific cerebrovascular disease), which has a more characteristic behavior - bright (hyperintense) on 3D brain images, often near the ventricles (major cavities in the brain), and roughly bilaterally symmetric. Since leukoaraiosis has a more accessible geometry and spatial variability, I will explore mathematical representations to capture it in 3D brain images. Such representations can then be correlated with stroke outcome, offering a better understanding of ischemic stroke and helping in pathology labeling (segmentation) and stroke prognosis.    </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 11 | Shraman Ray Chaudhuri | <i>Deep Learning for Connectome Segmentation on Multicores</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 11 | Shraman Ray Chaudhuri | <i>Deep Learning for Connectome Segmentation on Multicores</i></li>
         <li class="abstracts-body"> The brain harbors the most complex and least understood biological structure of all organs. Incidentally, it is at the forefront of medical, physiological, and pathological research, and there is an increasing demand for knowledge of the brain's composition. To better understand the connection between the brain's many structures and its functionality, we require a graphical model of the brain's basic building blocks - neurons and synapses - collectively referred to as the "connectome." With billions of neurons and trillions of synapses, this problem computationally infeasible with current technologies and algorithms. The goal is to deconstruct the brain modeling problem as representative sub-problems (e.g. image segmentation, probability map inference, data representation) to uncover new methods that may be concatenated to produce a viable solution. Our research focuses on the task of "neuron segmentation" - drawing boundaries around neuron membranes in EM images - and increasing its accuracy and speed on multiple computer architectures. Our methods draw from principles in both machine learning and performance engineering, specifically applying "deep learning" algorithms (neural networks) for image segmentation and optimizing 3D CNNs on multicore processors (as opposed to GPUs) to handle memory-intensive inputs.    </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 12 | Sunayana Rane | <i>Developing a Better Model for the Morphological Classification of Galaxies</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 12 | Sunayana Rane | <i>Developing a Better Model for the Morphological Classification of Galaxies</i></li>
         <li class="abstracts-body"> As a scientific community, we are still unsure of how many galaxies in our universe form. New evidence suggests that galaxy collisions do not result in nearly enough gas loss for the resultant galaxy to become an elliptical galaxy; however, the lack of large amounts of classified data about each type of galaxy makes it difficult to draw conclusions about galaxy formation. Automating galaxy classification has been a consistently difficult task in astronomy. This research develops a new model to classify galaxies according to their Hubble sequence morphological classifications. Machine learning classification algorithms were implemented in order to build such a model to automate the classification process. Models were tuned and evaluated based on their accuracy in correctly classifying testing data. The most accurate model developed employs the Random Forests classification algorithm with bootstrapping implemented, with a 99.97% training accuracy, and a 96.28% testing accuracy. This model took 29 input parameters extracted by cross-matching galaxies labelled by Galaxy Zoo volunteers with Sloan Digital Sky Survey data. Several other machine learning classification algorithms were also implemented: Supervised Artificial Neural Network (94.13% testing accuracy), Decision Trees (94.39% testing accuracy), Support Vector Machines (93.42% testing accuracy), K-Nearest-Neighbor Classifier (90.28% testing accuracy), and a Naive Bayes Classifier (69.87% testing accuracy). Receiver-operating characteristic (ROC) curves were also used to evaluate model performance, and the resulting analysis coincided with the pattern demonstrated by testing accuracies.    </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 13 | Alisha Saxena | <i>Developing Novel Methods for Robust De-Identification of Free-Text Health Record</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 13 | Alisha Saxena | <i>Developing Novel Methods for Robust De-Identification of Free-Text Health Record</i></li>
         <li class="abstracts-body"> <p> Large volumes of data are routinely collected from patients admitted to hospitals, particularly in intensive care units where critical illness requires close monitoring. This data can be mined for a variety of medical and academic purposes, but it generally contains highly sensitive information about the hospital's patients, limiting the extent to which it can be shared with researchers. </p>
         <p> The Health Insurance Portability and Accountability Act has laid out guidelines for patient data de-identification, including the removal of eighteen specific identifying data elements. Removing these eighteen fields, which include patient names, telephone numbers, addresses, etc.,is not straightforward. Furthermore, additional steps may be required to remove distinctive details that indicate a patient's identity when cross-referenced with public records often isn't sufficient because a patient's identity could potentially be pieced together using clues from the data that are then supplemented with information from public records. This makes it difficult to make the data available to researchers. Thus, it is important to develop robust methods for de-identifying patient data while still leaving enough information in the set to maintain its value for academic and industrial research, healthcare quality improvement initiatives, and higher education coursework. </p>
         <p> The Lab for Computational Physiology has received several highly detailed clinical datasets from various hospitals, providing us the unique opportunity to develop novel de-identification methods. In response to demand for a de-identification package, the lab has developed a de-identification package that is more generalizable, easier to use, and able to significantly outperform existing methods when benchmarked against a gold standard corpus. </p> </li>
@@ -197,19 +198,19 @@
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 14 | Rohan Banerjee | <i>Developing a Robotic System with Speaking Subject Localization</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 14 | Rohan Banerjee | <i>Developing a Robotic System with Speaking Subject Localization</i></li>
         <li class="abstracts-body"> Robotic systems that can interact with humans have the potential to fill an important niche in situations that are inherently dangerous or tedious for humans, such as healthcare and disaster relief. One component of the human-robot interaction problem involves robotic participation in human spoken conversation, where a robot would effectively respond to verbal instructions and non-verbal cues. In this project, we first aim to demonstrate the feasibility of a static system that can localize a speaking subject using a combination of audio and visual localization techniques. We will conduct experiments to gauge the effectiveness of the system under different environmental and subject configurations. Our ultimate goal is to provide a low-cost enhancement to the Baxter research robotic platform based on the static system, which will allow the platform to engage in conversations with humans.     </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 15 | Sarah Hensley | <i>Balance and Force Control with NASA’s Humanoid: Valkyrie</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 15 | Sarah Hensley | <i>Balance and Force Control with NASA’s Humanoid: Valkyrie</i></li>
         <li class="abstracts-body"> Valkyrie is a humanoid robot designed to work in environments designed for humans, so it needs manual dexterity comparable to that of a human. Valkyrie's arm has actuators that are connected together; when one motor rotates, it causes the joint attached to that motor but also other joints to rotate. These rotations in other joints make it difficult to command the arm to move to a precise location, limiting Valkyrie's dexterity. Currently, the actuators can only use sensor data from each one's own joint to calculate motor inputs. If the actuators share information with each other, they could predict how a single motor input affects the other actuators connected to it. Thus, they could control how Valkyrie's arm moves more precisely, improving dexterity. This research focuses on control of the actuators in the arm when they can and cannot share sensor data. Mathematical simulations of three different levels of information sharing are compared, with the ultimate goal of the research being to improve control of the arm.    </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 16 | Peniel Argaw | <i>Noninvasive Optical Screening for Diabetes</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 16 | Peniel Argaw | <i>Noninvasive Optical Screening for Diabetes</i></li>
         <li class="abstracts-body"> <p> About 400 million people in the world have diabetes, with about half of them not even knowing they have it. According to the International Diabetes Federation, in 2015, 1 person every 6 seconds died from diabetes-related issues. One way to decrease the death toll is to find the individuals who have diabetes but are undiagnosed, and provide them with the care and medication they need before the diabetes worsens. The most common techniques for diagnosing diabetes can be expensive and time-consuming. Moreover, many of these techniques require invasive procedures. </p>
         <p> Since spectroscopy can be used to measure the amount of glucose in the bloodstream, our solution is to create a simple spectrometer that will analyze the skin and provide an image of the resulting spectra. This image will then be processed, and return the individual's diagnosis. The goal of this device is to make it noninvasive, low-cost and accessible. </p>
         <p> For my project this year, I have worked on creating a low-cost device that will be able to attach to a smartphone and analyze the quantity of glucose in the bloodstream with a quick examination of the skin. Last semester, I created and tested the device, then over IAP, I went to India to conduct trials at a partner hospital on both diabetic and non-diabetic patients. The resultant data will be analyzed this semester to see if the device is able to distinguish between the diabetic and non-diabetic patients. Afterwards, the mobile application can be made to work with the device. </p>
@@ -218,31 +219,31 @@
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 17 | Arturo Chavez-Gehrig </li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 17 | Arturo Chavez-Gehrig </li>
         <li class="abstracts-body"> Mutect was first created by at the Broad in 2013. This tool is able to identify single nucleotide mutants despite low purity samples. Using a variety of machine learning techniques to greatly improve the output of Mutect, purely by looking at relevant characteristics of the single sample and notably without a panel of normals. A variety of methods were tested with varying precision, from logistic regression to convolutional deep net. This approach gives Mutect the ability to identify variants with greater specificity. The overall impact will be a reduction in manual curation of the Mutect output, so the variants called are more likely to be the result of the sample, rather than noise from sequencing.    </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 18 | Katy  Johnson | <i>Microbial Phenotype Association Database to Interpret 16S Studies</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 18 | Katy  Johnson | <i>Microbial Phenotype Association Database to Interpret 16S Studies</i></li>
         <li class="abstracts-body"> Bacterial 16S ribosomal RNA sequences are frequently used to better understand complex bacterial communities, such as those in the human gut microbiome. The 16S gene contains different regions that are highly variable across species, and can be used to identify which bacteria are present in a sample. Microbiome studies currently utilize these 16S RNA sequences to understand the components of our gut microbiome. Current tools provide associations between individual bacteria and a condition of interest (for example, health or disease), but unless a scientist has extensive background in bacterial research, it is hard to discern patterns or commonalities among these outputted bacteria. Currently no database exists that maps all known phenotypes and functions to bacteria. I am creating a tool that translates given 16S sequence(s) to phenotypic information and the source fo that information, which can then enable mechanistic interpretations of observed associations. The tool combines existing databases built on textbooks and experimental studies to provide a seamless one-stop experience for obtaining phenotypical data from a 16S sequence.     </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 19 | Linh  Nguyen | <i>Mutational Signature Analysis in Human Genome</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 19 | Linh  Nguyen | <i>Mutational Signature Analysis in Human Genome</i></li>
         <li class="abstracts-body"> All cancers carry somatic mutations. The mutations are caused by "mutational processes", characterized by a disproportionate amount of mutation types. Using whole-genome sequences data of somatic cancers from 560 patients, we would like to decode the mutational processes encoding the mutations. Understanding the mutational signatures will help understanding the biological processes causing such driver mutations, therefore helping us to find more effective and personalized treatment to the patients.    </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 20 | Aman Patel | <i>Validation of a Microfluidic Sample Preparation Process for Whole Genome Sequencing</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 20 | Aman Patel | <i>Validation of a Microfluidic Sample Preparation Process for Whole Genome Sequencing</i></li>
         <li class="abstracts-body"> The advent of microbial whole genome sequencing (WGS) promises to answer several key questions in biotechnology, especially relating to disease, drug resistance, and evolutionary biology. However, a disconnect exists between the utility and low cost of the technique and the bottleneck created by the expensive sample preparation process. For WGS to reach its full potential, sample preparation must be streamlined and made significantly more cost-effective. To achieve this, a novel microfluidic chip has been created that can prepare samples with around a thousand times less DNA and a sixty-fold reduction in cost. However, before the chip can be classified as a viable preparation tool, it must be proven that the quality of the sequence data produced is equal to or higher than that of data derived from traditional benchtop methods. In this study, a variety of computational sequencing analysis techniques were employed to this end. First, raw sequence data from both sources were trimmed and then mapped to a standard reference genome. Variants between the samples and the reference were then extracted and compared. As related sequences display similar variant patterns, variant calling provided a useful metric for quantifying the similarity of the chip data to benchtop data. The results proved conclusively that the microfluidic chip produced data of sufficient quality to be considered a viable alternative to current methods. These results therefore verify a potential solution to expedite WGS sample preparation, which in turn could lead to accelerated advances in medicine, public health, and several other prominent fields.    </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 21 | Yinghua Shen | <i>Crowdsourcing ECG Signal Annotation Tool</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 21 | Yinghua Shen | <i>Crowdsourcing ECG Signal Annotation Tool</i></li>
         <li class="abstracts-body"> <p> The electrocardiogram (ECG) records the electric potential that triggers the mechanical activities of the heart, and it plays a vital role in the diagnosis of cardiovascular diseases. Accurate classification of the ECG is important in medical engineering as it could enable early alerting of physiologic abnormality. This project aims to develop a collaborative annotation tool for classifying different types of clinical data, initially focused on labelling ECG recordings that exhibit atrial fibrillation (AF). </p>
   
         <p> While performing initial investigations of ECG waveform data using Julia, the author realized that AF classification is a challenging problem because of the complexity of ECG signals and the limited availability of annotated data. Existing AF detectors are limited in applicability because they are typically developed using only classification of normal and AF rhythms on sets of carefully-selected data. This project classifies ECG waveform into four categories: normal sinus rhythm, AF, an alternative rhythm, or too noisy to classify. </p>
@@ -252,32 +253,32 @@
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 22 | Andrea Li | <i>False Arrhythmia Alarm Reduction in the Intensive Care Unit</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 22 | Andrea Li | <i>False Arrhythmia Alarm Reduction in the Intensive Care Unit</i></li>
         <li class="abstracts-body"> Research has shown that false alarms constitute more than 80 percent of the alarms triggered in the intensive care unit (ICU). The high false arrhythmia alarm rate has severe implications such as disruption of patient care, alarm fatigue and desensitization from clinical staff to real life-threatening alarms. A method to reduce the false alarm rate would therefore greatly benefit patients as well as nurses in their ability to provide care. In this SuperUROP project, I build upon previous work to develop a robust false arrhythmia alarm reduction system for use in the ICU. We make use of machine learning and signal processing techniques, including filters and peak detection, to identify invalid data segments and determine if channels exhibit regular activity or evidence of a serious arrhythmia. We hope to build an algorithm which ultimately performs with high sensitivity and specificity in a retrospective as well as real-time setting. Such an algorithm could potentially be translated for use in the ICU to promote overall patient care and recovery. </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 23 | Hane Lee | <i>Guiding Drug Titration During Procedural Sedation</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 23 | Hane Lee | <i>Guiding Drug Titration During Procedural Sedation</i></li>
         <li class="abstracts-body"> Procedural sedation uses drugs such as propofol to relieve pain and anxiety associated with medical procedures performed outside the operating room. There is currently no objective measure of sedation level to guide the titration of medications, leading to the risk of under- or over-sedation. This research will use pharmacokinetic models to estimate the time course of the sedation agent in the body, in order to provide more objective markers of sedation. A database containing detailed information from procedural sedations carried out at two collaborating hospitals will permit evaluation of this approach. We will also develop a tool to guide the physician in real-time, displaying the estimated sedation state and recommendations regarding how much additional sedation agent to administer and when, based on the anticipated remaining duration of the procedure.    </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 24 | Rujie Yao | <i>Continuous Removal of Non-viable Cells and Cell Debris in Perfusion Culture using a Microfluidic Separation Device</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 24 | Rujie Yao | <i>Continuous Removal of Non-viable Cells and Cell Debris in Perfusion Culture using a Microfluidic Separation Device</i></li>
         <li class="abstracts-body"> <p> Recently, there has been increasing interest in the use of perfusion cultures in the biomanufacturing industry, due to its many advantages, which include higher attainable cell concentrations, higher productivity, and reduced space and cost. The defining characteristics of a perfusion culture are the continuous reintroduction of fresh media into the bioreactor and the continuous removal of spent media. The latter is accomplished using a variety of cell-retention devices, the majority of which are membrane-based, using hollow fiber membranes. The design of cell-retention devices is a challenge due to the necessity of maintaining a sterile environment in the device, as well as the propensity for such devices to become clogged or fouled during the duration of the culture. </p>
         <p> In this project, we investigate the sorting capability of a novel membrane-less spiral microfluidic device in a perfusion culture setting, that is not only resistant to fouling and clogging, requiring little to no upkeep or maintenance, but is also easily scalable for industrial applications. We demonstrate successful retention capability by continuously removing cellular debris and nonviable cells from the bioreactor, while retaining the majority of the viable cells. We also investigate the effects of debris and dead cell removal on the quality and quantity of IgG antibody production, as well as explore other possible benefits of the device. This project is part of many ongoing efforts to discover more efficient and robust methods of cell-retention, and will also contribute to our current understanding of the mechanisms behind microfluidic flow. </p> </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 25 | Jonathan  Crawford </li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 25 | Jonathan  Crawford </li>
         <li class="abstracts-body"> PU.1 is a transcription factor shown to be critical in myeloid cell generation. PU.1 deficiencies at birth and germline depletion of PU.1 are both generally lethal; however, conditional knockout of PU.1 in adult mice allows us to preferentially deplete CSF1R-positive macrophages while maintaining normal B cell populations. Transcription of colony-stimulating factor 1 receptor protein (CSF1R) is driven by a promoter present in myeloid cells and absent from B cells. In this experiment we use a Cre/loxP system to conditionally knock out PU.1 expression in CSF1R-positive macrophages of adult mice and then measure macrophage populations in the peritoneum in response to induction of the flu. We also analyze immune infiltrate concentrations in the lung to explore the role of macrophages in flu response. Our hypothesis is that PU.1 knockout will be sufficient to deplete CSF1R-positive macrophage populations, and that mice with depleted CSF1R-positive macrophage populations will be unable to mount a normal T cell response to the flu. We also hypothesize that DC populations will decline after tamoxifen induction since CSF1R macrophages, which are a precursor to dendritic cells, are lost.     </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 26 | Erin Reynolds | <i>Bioengineered Yeast for Heavy Metal Remediation</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 26 | Erin Reynolds | <i>Bioengineered Yeast for Heavy Metal Remediation</i></li>
         <li class="abstracts-body"> <p> Heavy metal contamination from industrial activity poses an ecological and human health hazard. Current methods of removing heavy metals from wastewater have distinct disadvantages: chemical precipitation generates residual waste sludge, while ion exchange technology is easily soiled and requires expensive infrastructure. Bioremediation using yeast has been proposed as an alternative to conventional treatment technologies, but current yeast biosorbents are nonspecific and less efficient than ion exchange technology. </p>
 
         <p> Yeast that specifically accumulate metals could lead to more efficient removal of
@@ -294,13 +295,13 @@
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 27 | Jimmy Mawdsley | <i>A Molecular Clock using Terahertz Spectral Sensing</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 27 | Jimmy Mawdsley | <i>A Molecular Clock using Terahertz Spectral Sensing</i></li>
         <li class="abstracts-body"> Aided by advances at the device, circuit, and system levels, the application of high-frequency signals to problems of sensing and communications has become increasingly fruitful over the past decade. Communication circuits operating in the mm-Wave and terahertz regions of the electromagnetic spectrum have traditionally suffered from greater absorption of radiated signals by the environment. This same drawback provides the basis for a very stable electronic clock designed around strong molecular absorption lines at high frequencies. By probing a sample of carbonyl sulfide gas with mm-Wave radiation, it is possible to form a closed-loop clock synthesizer having superior long-term stability to chip-scale atomic clocks. Such a molecular clock could serve applications where precise time keeping and synchronization are required. As a SuperUROP researcher, I have assisted Cheng Wang with the development of a prototype and chip-scale implementation of the molecular clock. Using the prototype system, we have demonstrated locking of a crystal oscillator to an absorption line at 231.060 GHz and the resulting phase noise improvement over the free running oscillator. In parallel, we are designing circuit blocks for the chip-scale clock, which is to be taped-out in April. Measurements of Allen deviation and temperature sensitivity will be available soon.     </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 28 | Daniel Richman | <i>RABBIT: Secure Frequency Hopping for Internet of Things</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 28 | Daniel Richman | <i>RABBIT: Secure Frequency Hopping for Internet of Things</i></li>
         <li class="abstracts-body"> <p> Internet of Things devices such as building sensors, health monitors, and industrial equipment often communicate using the Bluetooth Low Energy protocol, which is vulnerable to selective jamming attacks. With IoT applications in mind, we present a novel ultra-low-power fast-hopping wireless transmitter architecture co-designed with an on-chip security engine and control protocol. Our transmitter operates in the 2.4 GHz band and offers greater security against selective jamming by hopping between carrier frequencies every microsecond. The ultra-fast hopping rate prevents jammers from accurately detecting a target transmitter's carrier frequency and initiating interference before the target's next hop. </p>
 
         <p> We also introduce the Rapid Adaptive Broad-Band frequency-hopping protocol for the Internet of Things (RABBIT). RABBIT is asymmetric, designed for sets of transmitter nodes communicating with a base station node, and adaptive, dynamically adjusting its configuration based on real-time interference conditions. The transmitter architecture's rapid hopping performance enables RABBIT to send each message bit on a different frequency, offering a theoretical transmit speed of one megabit per second for one transmitter. Together, the low-energy RF architecture and RABBIT offer new security properties for low-power wireless devices. </p> </li>
@@ -308,37 +309,37 @@
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 29 | William Caruso | <i>Accessibility of Mobile Apps</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 29 | William Caruso | <i>Accessibility of Mobile Apps</i></li>
         <li class="abstracts-body"> Mobile Devices have become the primary method of communication between people. With over a billion people in the world living with a disability, it is essential that these devices be able to be used by all - especially in emergency situations. Software must be accessible and designed with people with disabilities in mind. There is no standard for native-mobile accessibility like there is for the Web. Currently, developers are sacrificing accessibility for functionality - a tradeoff that should not exist. This project focusses on identifying which features are vital for mobile accessibility and how to make accessible features easy to implement for native mobile developers. In addition, we are developing a testing framework that provides accessibility reports and suggestions to improve accessibility in native apps. The platform comes together with a companion reference guide for developers and designers to inspire app design with accessibility in mind. </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 30 | Byungkyu  Park | <i>Accessibility of Mobile Applications</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 30 | Byungkyu  Park | <i>Accessibility of Mobile Applications</i></li>
         <li class="abstracts-body"> Handheld devices, such as mobile phones, tablets, and smart watches, are rapidly replacing desktops and laptops as the primary communication and computation platform for many people. With almost one billion people with disabilities in the world, ensuring that apps for these handheld devices are accessible by people with disabilities is becoming more and more important and critical for emergency situations. Currently, there does not exist a set guideline for mobile apps to be accessible. The App Quality Alliance, also known as AQuA, provides a manual testing platform and shows how much of a coverage an app has for different accessible features through testing; however, it does not seem to be sufficient, and would be much better if the tool can test features automatically. In addition to the testing framework, it would be very helpful for developers to have an access to a code library specifically designed for accessibility features. My focus is on building a tool that can help developers build accessible apps by supporting automatic testing frameworks and code libraries.     </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 31 | Lisa Ruan</li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 31 | Lisa Ruan</li>
         <li class="abstracts-body"> In the pursuit of understanding computational thinking in App Inventor, it is important to first be able to effectively evaluate computational complexity in block programming languages. In the past, there have been a handful of proposed complexity measures for text programming languages, such as McCabe's Cyclomatic number, statement count, Halstead's Programming Effort, and the knot measure (Weyuker, 1988). In this paper, we will attempt to implement 2 such measures, Halstead's Programming Effort and statement count, in App Inventor on a dataset of projects from 50 random users. The goal is to determine whether or not text programming standards for complexity can be generalized to block programming languages. Here we show that the 2 complexity measures we implemented are not adequate measures for complexity in App Inventor. This result indicates a need for different measures of complexity that more accurately portray block programming proficiency. We hope this study will be a gateway into a better understanding of the intricacies of App Inventor's block programming language and its unique contributions to the development of computational thinking.    </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 32 | Jeanine Pearson | <i>Next Generation Humanitarian Technologies</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 32 | Jeanine Pearson | <i>Next Generation Humanitarian Technologies</i></li>
         <li class="abstracts-body"> In humanitarian crises, information is key to ensuring that disaster response efforts occur effectively and efficiently. However, since information has to be acquired from a variety of different sources at different times, it can be hard to obtain when needed. This SuperUROP project deals with designing and developing a notification service that monitors information essential for relief operations and workers provided by different parts of the United Nations Office for the Coordination of Humanitarian Affairs (UN OCHA). This includes contact information from the Humanitarian ID API, content about disasters and other events from ReliefWeb and HumanitarianResponse.info, reported humanitarian aid contributions from Financial Tracking Service (FTS), and updates to plans in the Humanitarian Programme Cycle (HPC). We interviewed multiple stakeholders and developers of UN information services from UN OCHA to identify and develop requirements for this notification service. From this information, we built a customizable service that can send various notifications through different mechanisms including email and SMS. The service relies on knowledge about specific relief workers from the Humanitarian ID app. This includes their organization, title, and most importantly, their current checked-in location. These details are used to personalize the notification content so that the relief worker automatically receives alerts about updates that are relevant to them. After implementation is complete, we plan to run a small pilot and use the feedback from end users to improve the service.    </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 33 | Emily Giurleo | <i>Keyboard Interactions in Block-Based Coding Environments</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 33 | Emily Giurleo | <i>Keyboard Interactions in Block-Based Coding Environments</i></li>
         <li class="abstracts-body"> App Inventor is a website that allows users to make their own Android apps using a block-based coding language. While App Inventor has almost 3 million users, it contains few accessibility features. In particular, there is no way for a user to navigate the block workspace on the App Inventor site without using their mouse; this poses a significant problem for users who use screen readers or who cannot operate a mouse. I will design and implement a set of keyboard shortcuts that allow users to operate the App Inventor website in a way that is intuitive and customizable, and evaluate my solution by conducting user tests.     </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 34 | Erjona Topalli</li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 34 | Erjona Topalli</li>
         <li class="abstracts-body"> <p> When a user browses the web, their browsing behaviour may be observed and collected by third party websites (trackers) that are not visited directly. These trackers can be embedded on the host websites in form of small images or invisible Javascript. Our goals are to allow users understand the status of their privacy in the Web, understand the data visualized and take conscious measures as well as make conscious decisions over their activities in the Web. </p>
         <p> Our visualization aims to bridge the gap between observing the trackers and presenting that information to the user. Our web extension stores and updates our visualizations over time as needed. The visualization makes use of the taxonomy of trackers and presents the information as bar charts over time of different tracker types over the browsing history of the user. </p> 
         </li>
@@ -346,7 +347,7 @@
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 35 | Gloria Chyr | <i>Crack Propagation Prevention by Implementation of Spiral Shapes in Composite Materials</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 35 | Gloria Chyr | <i>Crack Propagation Prevention by Implementation of Spiral Shapes in Composite Materials</i></li>
         <li class="abstracts-body"> <p> Crack propagation prevention by implementation of spiral shapes in composite materials</p>
   
         <p> Cracks are prevalent in all kinds of infrastructure used today. The propagation of cracks in buildings and bridges can cause severe damage to the integrity of these structures over extended periods of time and potentially endanger the lives of many people. </p>
@@ -359,56 +360,56 @@
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 36 | Aditya  Gopalan</li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 36 | Aditya  Gopalan</li>
         <li class="abstracts-body"> With human drivers to best-case traffic scenario is Wardrop Equilibrium, in which all routes from a source to a destination take the same amount of time. In practice, however, Wardrop Equilibrum does not manifest itself. With the rising ubiquity of autonomous cars, traffic networks will have the ability to reach the Social Optimum, which is the routing pattern that least stresses the traffic network infrastructure. For both cases, centralized algorithms exist which can compute the routing protocol which results in an optimal traffic scenario. However, with large networks, it can be computationally expensive to compute routing updates. In this work we present a robust distributed routing algorithm capable of guiding a traffic network to either the Wardrop Equilibrium or the Social Optimum. </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 37 | Cynthia Lo | <i>Synthesis and Characterization of a Supramolecular Self-Assembling System</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 37 | Cynthia Lo | <i>Synthesis and Characterization of a Supramolecular Self-Assembling System</i></li>
         <li class="abstracts-body"> Self-Assembling amphiphiles has been an area of recent interest due to their applications in a variety of contexts, from drug delivery to modifying common plastics. However, this area is still extremely new and under-characterized. This research seeks to characterize the self assembling dynamic behavior of a 4-aryl-N-methylpyridinium derivative with hydrophobic tails of varying lengths in a host-guest complex with CB[8] in water. Previous work had been done to show that 4-aryl-N-methylpyridinium derivatives form stable host-guest complexes in aqueous conditions, so we are hoping to see similar host-guest interactions with the addition of the hydrophobic tails. At this point, our first amphiphilic molecule has been synthesized and will be characterized shortly using EPR, TEM, and SAXS.    </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 38 | Anastasia Neuman | <i>Niemann-Pick C1 Impact on mRNA-containing Lipid Nanoparticle Endocytosis</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 38 | Anastasia Neuman | <i>Niemann-Pick C1 Impact on mRNA-containing Lipid Nanoparticle Endocytosis</i></li>
         <li class="abstracts-body"> Numerous diseases, including cancer, heart disease, diabetes, and the common cold, are brought on by aberrant protein expression. Delivery of nucleic acids to control such aberrant protein expression represents a promising therapeutic strategy to treat disease at its source, but nucleic acids typically require the use of delivery vehicles to be useful in a therapeutic context. Lipid nanoparticles (LNPs), in particular, have shown to effectively deliver nucleic acids such as siRNA and mRNA both in vivo and in vitro. Our lab has been able to develop highly potent materials through the use of high throughput screening techniques; however the cellular processes that determine their effectiveness remain unclear. Recent studies have shown that siRNA- loaded lipid nanoparticles are recycled back out of a cell following endocytosis, rendering a large proportion of the delivered dose ineffective. This recycling is dependent on the presence of Niemann-Pick type C1 (NPC1), a protein involved in cellular cholesterol trafficking. In this study, we seek to further elucidate the mechanisms by which NPC1 directs the fate of endocytosed nanoparticles. To do this, we have studied the effect of nanoparticle formulation parameters, nucleic acid cargo, and nucleic acid modifications on delivery and efficacy in wild-type versus NPC1 knockout cells.     </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 39 | Navil Perez | <i>Mucus as a Regulator of Microbial Interactions in the Human Microbiota</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 39 | Navil Perez | <i>Mucus as a Regulator of Microbial Interactions in the Human Microbiota</i></li>
         <li class="abstracts-body"> Efforts have been made to create a blueprint of the human microbiome by characterizing the microbial populations ubiquitous to each part of the human body. A significant amount of progress has been made in cataloging the microbiome; however cellular interactions within these microbial communities have remained largely unexplored. This research investigates how host induced factors, mainly mucus, affect quorum sensing (QS) cellular communication. Fluorescently labeled reporters are used as indication of QS activation in the presence of mucus. Breakthroughs in the understanding the role mucus plays in pacifying microbe-microbe competition can allow us to exploit mucus in the development of novel infection therapeutics.     </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 40 | Isak Romero | <i>Bone Inspired Composite Structures in Plastic</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 40 | Isak Romero | <i>Bone Inspired Composite Structures in Plastic</i></li>
         <li class="abstracts-body">
         <p> Often nature is used as a source of inspiration for scientific research. Over time nature has slowly eliminated less efficient solutions in favor of better answers to problems such as resistance to fracture. Many kinds of organic tissues show an amplification of mechanical properties with respect to their constituents far larger than man-made materials, despite being composed of weaker materials. For example, bone has a higher strength-to-weight ratio than mild steel, despite being made of collagen and hydroxyapatite, two materials with properties inferior to mild steel. The key to bone's strength lies in the way that these materials are organized at different levels. With current technology not only have we gained a better understanding of how these structures result in stronger materials, but recent developments in 3D-printing now allow for these structures to be easily replicated. If these structures were to be replicated using modern engineered materials the resulting composite material could be just as many times stronger. This research consists of studying the structure of bone, replicating it using 3D printers, and then examining the resulting properties. Through repeated testing and variation of several variables the design will maximize the desired properties. Results could be applied in potentially any manufacturing field with further improvements in 3D-printing, leading to stronger consumer plastics, implants, and perhaps construction material. </p> </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 41 | Luzdary Ruelas | <i>Diphenhydramine Crystallization Using Iron Oxide Nanoparticles (IONPs)</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 41 | Luzdary Ruelas | <i>Diphenhydramine Crystallization Using Iron Oxide Nanoparticles (IONPs)</i></li>
         <li class="abstracts-body"> The global shift towards sustainable technology has motivated research for waste minimization in chemical processes such as crystallization. Crystallization is a separation and purification technique where a compound precipitates from a solution to form a pure solid crystalline phase. Currently, antisolvent crystallization is the most widely used technique. However, it fails to meet green chemistry specifications because it requires adding more solvent to the original solution that ultimately becomes waste. The use of antisolvent crystallization in the pharmaceutical industry results in tons of waste particularly for water soluble drugs, such as diphenhydramine. Using functionalized iron oxide nanoparticles as an alternative to antisolvent crystallization reduces waste problems. The nanoparticles have magnetic and tunable properties that make separation easier and allow the particles to be reused. This research project will focus on developing a crystallization and purification method for a diphenhydramine system using functionalized iron oxide nanoparticles. Preliminary results indicate that nanoparticles can be used for increasing diphenhydramine's solubility in a solvent, which correlates to its purification ability. Further research will continue to characterize the purification method and begin experiments for the crystallization process.    </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 42 | Maya  Nasr | <i>Mars Oxygen In-Situ Resource Utilization Experiment (MOXIE)</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 42 | Maya  Nasr | <i>Mars Oxygen In-Situ Resource Utilization Experiment (MOXIE)</i></li>
         <li class="abstracts-body"> Space exploration has been always faced by serious economic challenges corresponding to the huge cost factors that accompany the large mass being launched. This issue is a challenge for all previous and upcoming Martian missions, which increases the importance of In-Situ Resource Utilization (ISRU) technologies every day. One ISRU technology, MOXIE, is the Mars Oxygen ISRU Experiment. It is being developed by NASA as a payload of the Mars 2020 rover to transform the CO2 that makes up 96% of the Martian atmosphere into O2 using solid oxide electrolysis (SOXE). This O2 can be used as a fuel for the Mars Sample Return (MSR) mission. However, in order to support the MSR mission or a Human Mars Mission later on, MOXIE must be expanded and scaled up. This SuperUROP will work on expanding MOXIE to support the mass, volume, and power budgets requirements of SpaceX's Red Dragon MSR mission, and then will run several tests and simulations on the new modeled system to ensure robust controls and performance of MOXIE on Mars. Using data from NASA JPL and Ceramatec in SimSituTM simulations, the found result so far is that the expanded MOXIE will require 1 stack of 18 cells to provide 5.58487 grams per hour of O2 each using 3.49278 Watts per cell.     </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 43 | Oliver  Jia-Richards | <i>Fiber-Film Probes for Unsteady Velocity Measurements</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 43 | Oliver  Jia-Richards | <i>Fiber-Film Probes for Unsteady Velocity Measurements</i></li>
         <li class="abstracts-body"> One of the main challenges in characterizing the dynamics of a rocket engine turbopump inducer is the measurement of mass flow fluctuations during forced response testing. Historically such measurements have been taken through a spatially averaged mass flow measurement far upstream of the inducer. The use of fiber-film probes in order to take local velocity measurements close to the inducer is proposed in order to gain insight into the spatial distribution of effects from cavitation. This project assesses the feasibility of using fiber-film probes for local velocity measurements in a rocket engine turbopump inducer through placing the probe in a preexisting inducer experimental setup. The survivability, signal-to-noise ratio, and accuracy of the probe will be determined for a variety of inducer operating conditions and measurement types.    </li>
         </ul>
       </li>
       <li>
         <ul>
-          <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 44 | Mohammed Al Ai Baky | <i>FPGA-based Controllers for Quantum Photonics Applications</i></li>
+          <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 44 | Mohammed Al Ai Baky | <i>FPGA-based Controllers for Quantum Photonics Applications</i></li>
           <li class="abstracts-body"> <p> Quantum Key Distribution (QKD) is one of the most established applications of the quantum information field. It is a way to encrypt data to guarantee secure communication due to the "no-cloning theorem" in quantum mechanics. On the other hand, the mostly used class of digital cryptography techniques, such as the RSA, relies on the fact that it is computationally hard to decompose a large number that is a product of two prime numbers [2]. The most efficient algorithm in solving the RSA problem takes an exponential number of steps. In addition, a successful implementation of a quantum computer will compromise the security of these algorithms in the future, since quantum computers can solve the RSA problem in polynomial number of steps. To further elaborate, it would take a current computer (with a 1 GHz CPU) about 1 million years to crack a 1000-bit RSA encryption, but a quantum computer (with a 1 MHz CPU) would take only about 1 day to crack the same encryption. Figure-1 shows the computation time to solve an n-bit RSA encryption by different quantum computer architectures and digital processor architecture. QKD is currently the only established cryptography method that is resistant against attacks using quantum computers. </p>
           <p> Since the time QKD, also known as Quantum Cryptography, was proposed in the early 80s, many QKD protocols were developed. The most prominent protocol is the Bennett and Brassard 1984 (BB84) protocol, where Alice (the sender) randomly sends the bits 0 or 1 in two non-commuting bases to Bob (the receiver). Current QKD implementations are, however, limited in its rate at approximately 1 Mbits/s because the bits must be encoded at single-photon level. One solution to this problem is to exploit multiple wavelength channels in its transmission, such that a single channel, an optical fiber or a free-space link, can carry multiple QKD channels at the same time: a scheme called wavelength-multiplexing. </p>
           <p> This poster describes the design, implementation, and testing of a 4-channel wavelength-multiplexed QKD system that consists of an FPGA-based driver and a quantum photonic chip. The FPGA-based driver modulates four different channels on the quantum photonic chip to send random bit signals synchronously at 1 GHz rate with 16-bit precision. The quantum photonic chip consists of four ring resonators that encode quantum information in time by producing a weak light pulse either in either the early (bit 0) or the late (bit 1) time bin, as well as their superposition. The design ensures that the QKD system can generate quantum-secure keys at a high-rate, while being compact. </p>
@@ -417,13 +418,13 @@
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 45 | Amir  Karamlou | <i>Efficient Spin-Photon Coupling in Diamond</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 45 | Amir  Karamlou | <i>Efficient Spin-Photon Coupling in Diamond</i></li>
         <li class="abstracts-body"> Over the past decade, the nitrogen vacancy (NV) center in diamond has demonstrated a great potential for solid state quantum information processing. However, one of the biggest challenges in using NV as a qubit is the readout of its quantum state. Typically, this is done through measuring the fluorescence emission rate of the NV under laser drive, which is correlated to its electronic spin state. Throughout this research, we enhance the emission rate and the farfield collection efficiency of NV center's fluorescence using local photonic nanostructures in order to increase the readout fidelity of the NV spin at room temperature. This will allow us to perform ultra-fast read out of the NV center, taking us one step closer to realizing scalable solid-state quantum computation.     </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 46 | Ayrton  Munoz | <i>Characterizing Single Photon Emitters in Gallium Nitride</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 46 | Ayrton  Munoz | <i>Characterizing Single Photon Emitters in Gallium Nitride</i></li>
         <li class="abstracts-body"> <p> A recently discovered class of defects in gallium nitride (GaN) wafers could provide exciting opportunities for implementing solid-state qubits. These defects can act as single photon emitters (SPEs) and are appealing due to the flexibility that GaN can provide in device fabrication. Photoluminescence measurements of these defects have shown high intensity over a wide range of wavelengths at room temperature. Despite the broad spectrum observed, we believe many of these emitters are from the same type of point defect and that differences in luminescence occur due to strain in the wafer. </p>
   
         <p> To further understand GaN SPEs, we use a combined experimental and computational approach. We use cathodoluminescence microscopy to determine variations in the structure and chemical composition of GaN defects. We also plan on measuring the strain dependence of the emission wavelength to determine the role of lattice strain on photoluminescence. Experimental data from these studies will allow us to use density functional theory (DFT) with the local density approximation-1/2 method to obtain transition energies and other electronic properties. We will then compare transition energies with experimental data to validate the method's accuracy and use the DFT results to determine the feasibility of implementing qubits with these defects. </p> 
@@ -432,61 +433,61 @@
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 47 | Uttara Chakraborty | <i>Fiber-integrated InAs Quantum Dot Single-photon Sources</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 47 | Uttara Chakraborty | <i>Fiber-integrated InAs Quantum Dot Single-photon Sources</i></li>
         <li class="abstracts-body"> Single-photon sources are essential to quantum information science applications such as quantum cryptography and quantum communication, which require "on-demand" single photons with high purity and brightness. Among currently studied candidates for such sources, epitaxially-grown III-V semiconductor quantum dots are perhaps the most promising solid-state single photon emitters. Whereas most studies have been confined to on-chip experiments where quantum dot emission is observed from the fabrication substrate itself, integrating quantum dots into more complex systems for quantum information processing remains a challenge. This work aims to develop versatile, fiber-integrated "plug-and-play" single-photon sources using indium arsenide (InAs) quantum dots coupled to gallium arsenide (GaAs) microcavities. By directly coupling the quantum dot emission into a fiber, we exploit the lower index contrast of the semiconductor-glass interface (compared to the semiconductor-air interface) to overcome the problem of low collection efficiency arising from total internal reflection at the semiconductor-air interface. Circular "bullseye" microcavity gratings in GaAs have been demonstrated to provide significant Purcell enhancement of the InAs quantum dot emission rate. We demonstrate the integration of InAs quantum dot-coupled GaAs bullseye microcavities with optical fibers using an elegant "pick-and-place" technique. A tungsten probe is maneuvered underneath the suspended bullseye membrane to detach and lift it from the fabrication substrate, and subsequently to centrally align it over the fiber core. The quantum dot-tipped fibers can be mounted vertically in a cryostat; this configuration enables us to excite the quantum dots and collect the emission through the same fiber, avoiding potential losses from additional free-space optics.    </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 48 | Damian Barabonkov | <i>CamlCoin: Blockchain Prototyping Platform</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 48 | Damian Barabonkov | <i>CamlCoin: Blockchain Prototyping Platform</i></li>
         <li class="abstracts-body"> CamlCoin is a prototyping platform for blockchain technologies written in Objective Caml. It acts as foundational code implementing a generalized blockchain skeleton. Due to OCaml's superbly flexible module system, CamlCoin can easily and rather quickly be extended by independent developers to prototype any new ideas they devise which incorporate the blockchain protocol. In essence, CamlCoin handles all of the commonalities among blockchain-enabled software so that the developers will only need to focus on the individuality of their respective ideas. All of the decentralized networking as well as cryptographic insurance is already taken care of. This way, testing out applications of the blockchain can be streamlined. The blockchain protocol is a new and disruptive technology with possibilities and potential still vastly unexplored. CamlCoin aims to contribute and expedite this growing technological movement.    </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 49 | Benjamin Chan | <i>Investigating Cognitive Techniques for Managing Optical Networks</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 49 | Benjamin Chan | <i>Investigating Cognitive Techniques for Managing Optical Networks</i></li>
         <li class="abstracts-body"> We seek to develop a new way of managing optical Metropolitan Area Networks (MAN), motivated by increasingly bursty and unstructured high-volume traffic. By using cognitive techniques, we can 1) detect, predict, and estimate these traffic loads, and 2) optimize resource scheduling and load balancing across the network. This project specifically focuses on designing algorithms to dynamically achieve high network performance, developing theoretical models for these algorithms, and running simulations to confirm the results. </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 50 | Douglas Chen | <i>Fast Recovery with Replication on a Multicore In-Memory Database</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 50 | Douglas Chen | <i>Fast Recovery with Replication on a Multicore In-Memory Database</i></li>
         <li class="abstracts-body"> As computing demands increase, many applications have significantly outstripped the computational resources available on a single processor, or even a single machine. This necessitates the creation of multiprocessor and distributed applications that run on multiple CPUs and multiple machines respectively. Unfortunately, developing such applications is difficult and error-prone, especially in the distributed case where systems and the network can fail. We propose a system called Replicated Shared Transactional Objects (Replicated STO) that will simplify writing efficient and fault-tolerant applications using the notion of serializable transactions, an abstraction that allows reasoning about a concurrent program's operation in sections that run serially and independently. We will do this by extending and optimizing the existing STO system, originally designed to ease writing high-performance multiprocessor applications, to operate in a replicated manner on a cluster of computers. Replicated STO employs traditional techniques like logging and distributed consensus protocols. However, replicated STO also incorporates system-specific optimizations on top of these techniques so that the high performance of STO is not affected.     </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 51 | Martin Krasuski | <i>Optimizing Memory System Performance in Graph Analytics</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 51 | Martin Krasuski | <i>Optimizing Memory System Performance in Graph Analytics</i></li>
         <li class="abstracts-body"> Graph analytics has gained prominence in the era of big data where many applications work on unstructured data. Unstructured data leads to irregular memory access patterns, which makes efficient cache utilization critical to the performance of graph algorithms. We propose a graph processing framework that utilizes hardware and software mechanisms to achieve better cache utilization and graph algorithm performance by dynamically determining an efficient order in which to process vertices.     </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 52 | Amber Meighan | <i>Clinical Trial Product Accountability with Blockchain</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 52 | Amber Meighan | <i>Clinical Trial Product Accountability with Blockchain</i></li>
         <li class="abstracts-body"> Clinical trial data misconduct is a problem with major possible consequences such as loss of patient life. Current clinical trial processes protect data confidentiality well but fail to properly protect the provenance of the data once created. As a solution to this problem, we propose the use of a blockchain. We are investigating the use of a private blockchain that utilizes smart contracts to enforce clinical trial policies and preserve the provenance of clinical trial data through its decentralized public ledger architecture. Currently, we are testing our private blockchain by placing it under adversarial attacks that simulate typical data misconduct actions that compromise current clinical trial processes. We are also examining the possible vulnerabilities of our blockchain solution. Given our evaluation, we hope to provide an effective and secure implementation that alerts those conducting the clinical trials about possible misconduct before it is too late. We also hope that our solution can be used in future trials by clinical researchers.     </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 53 | Varun Mohan | <i>Optimizing Memory System Performance in Graph Analytics</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 53 | Varun Mohan | <i>Optimizing Memory System Performance in Graph Analytics</i></li>
         <li class="abstracts-body"> System calls, the standard procedure for requesting resources from the operating system kernel, can be extremely computationally expensive. Moreover, even though kernels have been optimized for multicore settings, they still run system calls on only a single CPU. In this research, we will focus on parallelizing some of the more compute-intensive system calls like "fork" and "exec" to reduce the time spent in the kernel. We will be conducting our study on the Biscuit kernel, implemented by researchers in the MIT PDOS group. The Biscuit kernel is written in the Go programming language, which has built-in support for transient threads and will therefore be useful in our research for exploiting parallelism within system calls. Ultimately, the goal is for single-threaded kernel-intensive applications to have a significant speedup in multicore environments. Initial work has already provided close to linear speedup for parallelized "fork" system calls and improvements in Redis - an in-memory single-threaded key-value store - specifically while performing persistent snapshot. </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 54 | Mengjiao Yang | <i>Model for Generating Distributed Applications from Sequential Programs</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 54 | Mengjiao Yang | <i>Model for Generating Distributed Applications from Sequential Programs</i></li>
         <li class="abstracts-body"> Developing scalable applications using existing programming frameworks is hard. Programmers are forced into performing complex operations such as managing client-server communication, ensuring consistency of real-time data fetching, and coming up with techniques for scaling. While many programming models have been developed in recent years as an attempt to simplify distributed applications, most of them are only conceptually simple and requires additional user-specific implementations and adaptions. We propose a new programming model which revolves around a notion of scenarios. This model translates easy-to-understand sequential applications into distributed software programs to be executed by the existing distributed backend frameworks. As an example, we will see how a messaging application is expressed in terms of scenarios and processed by our model. My work in this project centers around connecting the scenario model with distributed frameworks and implementing benchmarks on our model to fine tune its performance. As an end result, we wish to achieve a framework that allows software developers to easily control distributed systems without having to face lower level details of a distributed program.    </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 55 | Andrew Xia</li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 55 | Andrew Xia</li>
         <li class="abstracts-body"> For devices in the Internet of Things to communicate with one another, an authentication platform must exist to confirm the identity of the other party. Having an effective and convenient authentication system is necessary for the future development and increased usage of devices in the Internet of Things. This SuperUROP project will implement a new pairings-based, public key leakage resilient authentication system to improve upon current authentication schemes. Due to the resource constraints of embedded devices and the complexity of pairings operations, we will also develop a dedicated hardware accelerator to improve our performance.    </li>
         </ul>
       </li>
       <li>
         <ul>
-        <li class="abstracts-name"><img class='abstracts-logo' src='images/eecscon-logo.png'> 56 | Divya Shanmugam | <i>Compressive Metagenomics: Using Biological Redundancy to Develop Faster Algorithms</i></li>
+        <li class="abstracts-name"><img class='abstracts-logo'  src='/images/eecscon-logo.png'> 56 | Divya Shanmugam | <i>Compressive Metagenomics: Using Biological Redundancy to Develop Faster Algorithms</i></li>
         <li class="abstracts-body"> <p> Year to year, the amount of metagenomic data increases exponentially, at a rate that computing power will soon no longer accommodate. Two problems arise with data at this scale: storage and read mapping. Compressive algorithms are key in order to solve both efficiently. We intend to develop compressive meta-genomic algorithms to address these issues in a manner that maintains accuracy and increases efficiency. By accomplishing this, we can unlock the potential of metagenomics to target cures to diseases at the microbial level. </p>
   
         <p> Metagenomic data breaks down into roughly two parts: sequences and their corresponding quality scores, a measure of sequencer read accuracy. Current methods focus compression efforts on quality scores, since they make up a majority of metagenomic storage. The project's results prove that quality score compression degrades downstream metagenomic analysis. Additionally, we explore compression as applied to read mapping. Here, we have demonstrated a 6x speedup compared to current approaches by taking advantage of redundant sequences across both the reference genome and the reads. Compression with regards to biological data is crucial in deriving tangible results from increasingly large datasets and the proposed methods dramatically accelerate the metagenomic pipeline. </p> </li>

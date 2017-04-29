@@ -842,14 +842,14 @@ canvas{
 .logo-container {
     line-height: 30px;
 }
-
+/*
 .masterworks {
   color: rgb(81,173,229);
 }
 
 .masterworks:hover {
   color: #4b4f56;
-}
+}*/
 
 .abstracts-link {
   color: rgb(239,46,50);
@@ -859,10 +859,13 @@ canvas{
   color: #4b4f56;
 }
 
+#navbar-space {
+  margin: 132px 0 0 0;
+}
+
 /* Abstracts CSS stuff */
 
-#abstracts-container {
-  margin: 132px 0 0 0;
+#container {
   width: 90%;
   display: inline-block;
 }
@@ -890,15 +893,19 @@ li.abstracts-body{
 }
 
 @media only screen and (max-width: 720px) {
-  #abstracts-container {
-      width: 95%;
-      margin: 100px 0 0 0;
+  #container {
+      width: 90%;
       display: inline-block;
       padding-bottom: 20px;
   }
 
+  #navbar-space {
+      margin: 100px 0 0 0;
+      /*display: inline-block;*/
+  }
+
   #poster {
-    padding-bottom: 0px !important; 
+    padding-bottom: 5px !important; 
   }
 }
 
@@ -919,8 +926,7 @@ li.abstracts-body{
 }
 
 
-#poster {
-  padding-top: 30px;
+#sub-container {
   padding-bottom: 30px;
 }
 
